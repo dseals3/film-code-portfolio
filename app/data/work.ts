@@ -1,5 +1,6 @@
 export const work = [
   {
+    slug: "VCReversal",
     title: "VCReversal",
     type: "short film",
     year: "2026",
@@ -8,6 +9,7 @@ export const work = [
     description: "Director, Director of Photography, Editor, Colorist",
   },
   {
+    slug: "for-those-who-feel-like-giving-up",
     title: "for those who feel like giving up...",
     type: "youtube video",
     year: "2025",
@@ -16,6 +18,7 @@ export const work = [
     description: "I did everything",
   },
   {
+    slug: "portfolio-site",
     title: "This Website",
     type: "code",
     year: "2026",
