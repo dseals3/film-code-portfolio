@@ -1,23 +1,29 @@
 export const work = [
   {
-    slug: "VCReversal",
+    slug: "vcreversal",
     title: "VCReversal",
-    type: "short film",
+    type: "Short Film",
     year: "2026",
     thumbnail: "",
-    previewVideo: "/video/aurora-timelapse-2.mp4",
-    fullVideo: "https://www.youtube.com/embed/h6nf7L9Wvp0?rel=0&modestbranding=1",
-    description: "Director, Director of Photography, Editor, Colorist",
+    previewVideo: "",
+    fullVideo: "",
+    roles: ["Director", "Director of Photography", "Editor", "Colorist"],
+    description: "After losing his grandfather, Rick struggles to overcome his grief, that is until he finds something strange in his grandfather's attic.",
+    tools: ["Davinci Resolve"],
+    featured: "true"
   },
   {
     slug: "for-those-who-feel-like-giving-up",
     title: "for those who feel like giving up...",
     type: "youtube video",
     year: "2025",
-    thumbnail: "",
-    previewVideo: "",
-    fullVideo: "",
-    description: "I did everything",
+    thumbnail: "/images/thumbnail_720.png",
+    previewVideo: "/video/aurora-timelapse-2.mp4",
+    fullVideo: "https://www.youtube.com/embed/h6nf7L9Wvp0",
+    roles: ["Everything"],
+    description: "After taking a gap year to pursue my life's goal of becoming a youtuber and not seeing any progress, I share the 3 most important lessons I'd learned in that gap year.",
+    tools: ["Davinci Resolve"],
+    featured: "true"
   },
   {
     slug: "portfolio-site",
@@ -27,6 +33,9 @@ export const work = [
     thumbnail: "",
     previewVideo: "",
     fullVideo: "",
+    roles: [""],
     description: "Built with Next.js as a Film x Code portfolio",
+    tools: ["Davinci Resolve"],
+    featured: "true"
   },
 ];
