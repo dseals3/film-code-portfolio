@@ -35,17 +35,32 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <p className="text-gray-400 leading-relaxed">
           {project.description}
         </p>
+        
+        {project.authorship && (
+            <p className="text-sm text-gray-500 mt-6 italic">
+                {project.authorship}
+            </p>
+        )}
 
-        <div className="flex flex-wrap gap-2">
+        <div className="mt-6 flex flex-wrap items-center gap-2">
             {project.roles.map((role) => (
-                <span key={role} className="px-2 py-1 text-xs rounded-md bg-white/6 text-gray-400 border border-white/6">
-                {role}
+                <span key={role}
+                    className="
+                        px-2.5 py-1
+                        text-xs tracking-wide
+                        rounded-md
+                        bg-white/5
+                        text-gray-400
+                        hover:bg-white/10
+                        cursor-pointer
+                        hover:text-white
+                        transition"
+                >
+                    {role}
                 </span>
             ))}
         </div>
-
       </div>
-
     </main>
   );
 }
