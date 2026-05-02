@@ -5,7 +5,8 @@ export const work = [
     type: "short film",
     year: "2026",
     thumbnail: "",
-    video: "/video/aurora-timelapse-2.mp4",
+    previewVideo: "/video/aurora-timelapse-2.mp4",
+    fullVideo: "https://www.youtube.com/embed/h6nf7L9Wvp0?rel=0&modestbranding=1",
     description: "Director, Director of Photography, Editor, Colorist",
   },
   {
@@ -14,7 +15,8 @@ export const work = [
     type: "youtube video",
     year: "2025",
     thumbnail: "",
-    video: "",
+    previewVideo: "",
+    fullVideo: "",
     description: "I did everything",
   },
   {
@@ -23,7 +25,8 @@ export const work = [
     type: "code",
     year: "2026",
     thumbnail: "",
-    video: "",
+    previewVideo: "",
+    fullVideo: "",
     description: "Built with Next.js as a Film x Code portfolio",
   },
 ];
