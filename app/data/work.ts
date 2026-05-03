@@ -14,19 +14,6 @@ export const work = [
     featured: "true"
   },
   {
-    slug: "kpreme-pink-lemonade",
-    title: "Kpreme - Pink Lemonade [Official Music Video]",
-    type: "music video",
-    year: "2026",
-    thumbnail: "",
-    previewVideo: "/video/kpreme-preview-3.mp4",
-    fullVideo: "https://www.youtube.com/embed/IjDnBJbnPTM",
-    roles: ["1st Assistant Camera"],
-    description: "",
-    tools: ["Blackmagic Pocket 6k Pro"],
-    featured: "true"
-  },
-  {
     slug: "i-need-a-hero-commercial",
     title: "I Need a Hero: Life. Pass it on.",
     type: "commercial",
@@ -37,6 +24,19 @@ export const work = [
     roles: ["Grip"],
     description: "",
     tools: ["Lights", "C-Stands"],
+    featured: "true"
+  },
+  {
+    slug: "kpreme-pink-lemonade",
+    title: "Kpreme - Pink Lemonade [Official Music Video]",
+    type: "music video",
+    year: "2026",
+    thumbnail: "",
+    previewVideo: "/video/kpreme-preview-3.mp4",
+    fullVideo: "https://www.youtube.com/embed/IjDnBJbnPTM",
+    roles: ["1st Assistant Camera"],
+    description: "",
+    tools: ["Blackmagic Pocket 6k Pro"],
     featured: "true"
   },
   {
