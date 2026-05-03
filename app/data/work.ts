@@ -18,7 +18,7 @@ export const work = [
     title: "I Need a Hero: Life. Pass it on.",
     type: "commercial",
     year: "2026",
-    thumbnail: "",
+    thumbnail: "/images/liveonNY.jpg",
     previewVideo: "/video/liveonny-prvw-1.mp4",
     fullVideo: "https://www.youtube.com/embed/tNKRdvi7OiI",
     roles: ["Grip"],
