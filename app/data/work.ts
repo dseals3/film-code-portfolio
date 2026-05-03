@@ -22,7 +22,7 @@ export const work = [
     previewVideo: "/video/liveonny-prvw-1.mp4",
     fullVideo: "https://www.youtube.com/embed/tNKRdvi7OiI",
     roles: ["Grip"],
-    description: "",
+    description: "Set within a hospital, LiveOnNY's public service campaign centers on a patient in need of a life-saving organ, as family members and loved ones deliver a somber and deeply moving rendition of the 1980s hit song, “Holding Out for a Hero,” by Bonnie Tyler. LiveOnNY.org",
     tools: ["Lights", "C-Stands"],
     featured: "true"
   },
@@ -45,7 +45,7 @@ export const work = [
     type: "code",
     year: "2026",
     thumbnail: "",
-    previewVideo: "/video/kpreme-preview-2.mp4",
+    previewVideo: "/video/kpreme-prvw-4.mp4",
     fullVideo: "",
     roles: [""],
     description: "Built with Next.js as a Film x Code portfolio",
