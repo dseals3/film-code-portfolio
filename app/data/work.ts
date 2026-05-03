@@ -29,7 +29,7 @@ export const work = [
   {
     slug: "i-need-a-hero-commercial",
     title: "I Need a Hero: Life. Pass it on.",
-    type: "commercial"
+    type: "commercial",
     year: "2026",
     thumbnail: "",
     previewVideo: "",
