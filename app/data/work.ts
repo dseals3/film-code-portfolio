@@ -32,7 +32,7 @@ export const work = [
     type: "commercial",
     year: "2026",
     thumbnail: "",
-    previewVideo: "",
+    previewVideo: "/video/kpreme-preview-3.mp4",
     fullVideo: "https://www.youtube.com/embed/tNKRdvi7OiI",
     roles: ["Grip"],
     description: "",
