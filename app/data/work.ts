@@ -1,15 +1,15 @@
 export const work = [
   {
-    slug: "vcreversal",
-    title: "VCReversal",
-    type: "Short Film",
+    slug: "kpreme-pink-lemonade",
+    title: "Kpreme - Pink Lemonade [Official Music Video]",
+    type: "music video",
     year: "2026",
     thumbnail: "",
-    previewVideo: "",
-    fullVideo: "",
-    roles: ["Director", "Director of Photography", "Editor", "Colorist"],
-    description: "After losing his grandfather, Rick struggles to overcome his grief, that is until he finds something strange in his grandfather's attic.",
-    tools: ["Davinci Resolve"],
+    previewVideo: "/video/kpreme-preview-1.mp4",
+    fullVideo: "https://www.youtube.com/embed/IjDnBJbnPTM",
+    roles: ["1st Assistant Camera"],
+    description: "",
+    tools: ["Blackmagic Pocket 6k Pro"],
     featured: "true"
   },
   {
@@ -32,7 +32,7 @@ export const work = [
     type: "code",
     year: "2026",
     thumbnail: "",
-    previewVideo: "",
+    previewVideo: "/video/kpreme-preview-1.mp4",
     fullVideo: "",
     roles: [""],
     description: "Built with Next.js as a Film x Code portfolio",
