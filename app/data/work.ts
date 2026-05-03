@@ -19,7 +19,7 @@ export const work = [
     type: "music video",
     year: "2026",
     thumbnail: "",
-    previewVideo: "/video/kpreme-preview-1.mp4",
+    previewVideo: "",
     fullVideo: "https://www.youtube.com/embed/IjDnBJbnPTM",
     roles: ["1st Assistant Camera"],
     description: "",
