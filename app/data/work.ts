@@ -18,7 +18,7 @@ export const work = [
     type: "youtube video",
     year: "2025",
     thumbnail: "/images/dontgiveup_thumbnail_720.png",
-    previewVideo: "/video/aurora-timelapse-2.mp4",
+    previewVideo: "/video/dontgiveup-web-preview.mp4",
     fullVideo: "https://www.youtube.com/embed/h6nf7L9Wvp0",
     roles: ["Writer", "Director", "Director of Photography", "Gaffer", "Editor", "Colorist"],
     authorship: "Created Entirely by Damian Seals",
