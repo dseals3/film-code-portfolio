@@ -12,7 +12,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-gray-300">
-            I build build for the web - and I shoot for it.
+            I build for the web - and I shoot for it.
           </p>
 
           <div className="mt-10 flex gap-4 justify-center">
