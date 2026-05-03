@@ -1,18 +1,5 @@
 export const work = [
-  {
-    slug: "kpreme-pink-lemonade",
-    title: "Kpreme - Pink Lemonade [Official Music Video]",
-    type: "music video",
-    year: "2026",
-    thumbnail: "",
-    previewVideo: "/video/kpreme-preview-1.mp4",
-    fullVideo: "https://www.youtube.com/embed/IjDnBJbnPTM",
-    roles: ["1st Assistant Camera"],
-    description: "",
-    tools: ["Blackmagic Pocket 6k Pro"],
-    featured: "true"
-  },
-  {
+    {
     slug: "for-those-who-feel-like-giving-up",
     title: "for those who feel like giving up...",
     type: "youtube video",
@@ -27,12 +14,38 @@ export const work = [
     featured: "true"
   },
   {
+    slug: "kpreme-pink-lemonade",
+    title: "Kpreme - Pink Lemonade [Official Music Video]",
+    type: "music video",
+    year: "2026",
+    thumbnail: "",
+    previewVideo: "/video/kpreme-preview-1.mp4",
+    fullVideo: "https://www.youtube.com/embed/IjDnBJbnPTM",
+    roles: ["1st Assistant Camera"],
+    description: "",
+    tools: ["Blackmagic Pocket 6k Pro"],
+    featured: "true"
+  },
+  {
+    slug: "i-need-a-hero-commercial",
+    title: "I Need a Hero: Life. Pass it on.",
+    type: "commercial"
+    year: "2026",
+    thumbnail: "",
+    previewVideo: "",
+    fullVideo: "https://www.youtube.com/embed/tNKRdvi7OiI",
+    roles: ["Grip"],
+    description: "",
+    tools: ["Lights", "C-Stands"],
+    featured: "true"
+  },
+  {
     slug: "portfolio-site",
     title: "This Website",
     type: "code",
     year: "2026",
     thumbnail: "",
-    previewVideo: "/video/kpreme-preview-1.mp4",
+    previewVideo: "/video/kpreme-preview-2.mp4",
     fullVideo: "",
     roles: [""],
     description: "Built with Next.js as a Film x Code portfolio",
