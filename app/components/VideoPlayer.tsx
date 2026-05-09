@@ -17,7 +17,7 @@ export default function VideoPlayer({ src, thumbnail }: Props) {
       {!isLoaded && (
         <button
           onClick={() => setIsLoaded(true)}
-          className="absolute inset-0 flex items-center justify-center bg-zinc-900 group"
+          className="absolute inset-0 flex items-center justify-center bg-zinc-900 group cursor-pointer"
         >
           <img
             src={thumbnail}
