@@ -50,7 +50,8 @@ export default function Home() {
       {/* CONTACT */}
       <section className="py-24 px-6 text-center border-t border-zinc-800">
         <h2 className="text-2xl font-semibold">Contact</h2>
-        <p className="mt-4 text-gray-400">macadamianseals@gmail.com</p>
+        <p className="mt-4 text-gray-400">Damian Seals</p>
+        <p className="text-gray-400">macadamianseals@gmail.com</p>
       </section>
 
     </main>
