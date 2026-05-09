@@ -48,7 +48,7 @@ export default function VideoCard({ item }: { item: WorkItem }) {
             </h3>
 
             {/* DESCRIPTION */}
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
                 {item.description}
             </p>
             </div>
