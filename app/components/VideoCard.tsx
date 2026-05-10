@@ -14,24 +14,28 @@ type WorkItem = {
 export default function VideoCard({ item }: { item: WorkItem }) {
   return (
     <Link href={`/projects/${item.slug}`}>
-        <div className="group relative bg-zinc-900 rounded-xl hover:bg-zinc-800 transition overflow-hidden">
+        <div className={"group relative bg-zinc-900 rounded-xl hover:bg-zinc-800 transition overflow-hidden"}>
             {/* VIDEO */}
-            <div className="relative">
-            <video
-                className="w-full h-64 object-cover"
-                src={item.previewVideo}
-                muted
-                loop
-                playsInline
-                onMouseOver={(e) => e.currentTarget.play()}
-                onMouseOut={(e) => e.currentTarget.pause()}
-            />
+            <div className={`relative
+                ${item.type === "vertical"
+                ? "aspect-[9/16] max-w-[360px]"
+                : "aspect-video"
+            }`}>
+                <video
+                    className="w-full h-64 object-cover"
+                    src={item.previewVideo}
+                    muted
+                    loop
+                    playsInline
+                    onMouseOver={(e) => e.currentTarget.play()}
+                    onMouseOut={(e) => e.currentTarget.pause()}
+                />
             <div className="absolute top-4 right-4 z-10">
                 <div className="px-3 py-1 text-sm text-gray-300 bg-black/60 text-white rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition">
-                View project →
+                    View project →
                 </div>
             </div>
-            </div>
+        </div>
 
             {/* TEXT OVERLAY */}
             <div className="p-6 flex-col space-y-3">
