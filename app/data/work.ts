@@ -62,7 +62,7 @@ export const work = [
     fullVideo: "",
     roles: [""],
     description: "Built with Next.js as a Film x Code portfolio",
-    tools: ["Davinci Resolve"],
+    tools: ["Next.js"],
     featured: "true"
   },
   {
@@ -71,12 +71,12 @@ export const work = [
     type: "vertical",
     year: "2026",
     thumbnail: "",
-    previewVideo: "/video/tiger-short.mov",
+    previewVideo: "",
     fullVideo: "https://www.youtube.com/embed/zf_1x_PCJbM",
     authorship: "Created Entirely by Damian Seals",
     roles: ["Writer", "Director", "Director of Photography", "Gaffer", "Editor", "Colorist"],
     description: "",
     tools: ["Sony A7iv", "Davinci Resolve", "C-Stand"],
-    featured: "true"
+    featured: "false"
   },
 ];
