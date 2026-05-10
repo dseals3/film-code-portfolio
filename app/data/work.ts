@@ -45,7 +45,7 @@ export const work = [
     type: "short film",
     year: "2025",
     thumbnail: "/images/dear-david-thnail.jpg",
-    previewVideo: "",
+    previewVideo: "/video/dear-david-prvw.mov",
     fullVideo: "https://www.youtube.com/embed/XZF__F6svTU",
     roles: ["Director of Photography", "Colorist"],
     description: "",
