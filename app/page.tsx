@@ -31,9 +31,9 @@ export default function Home() {
       <section className="py-24 px-6 max-w-5xl mx-auto">
         <h2 className="text-2xl font-semibold mb-8">Selected Work</h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {work.map((item, i) => (
-            <VideoCard key={i} item={item} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+          {work.map((item) => (
+            <VideoCard key={item.slug} item={item} />
           ))}
         </div>
       </section>
