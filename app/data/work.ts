@@ -40,20 +40,6 @@ export const work = [
     featured: "true"
   },
   {
-    slug: "an-active-day-in-my-life",
-    title: "An Active Day in My Life (Sponsored by EarthRunners)",
-    type: "vertical",
-    year: "2026",
-    thumbnail: "",
-    previewVideo: "",
-    fullVideo: "https://www.youtube.com/embed/zf_1x_PCJbM",
-    authorship: "Created Entirely by Damian Seals",
-    roles: ["Writer", "Director", "Director of Photography", "Gaffer", "Editor", "Colorist"],
-    description: "",
-    tools: ["Sony A7iv", "Davinci Resolve", "C-Stand"],
-    featured: "true"
-  },
-  {
     slug: "dear-david",
     title: "Dear David | Knoxville 7 Day Shootout Film Competition",
     type: "short film",
@@ -77,6 +63,20 @@ export const work = [
     roles: [""],
     description: "Built with Next.js as a Film x Code portfolio",
     tools: ["Davinci Resolve"],
+    featured: "true"
+  },
+  {
+    slug: "an-active-day-in-my-life",
+    title: "An Active Day in My Life (Sponsored by EarthRunners)",
+    type: "vertical",
+    year: "2026",
+    thumbnail: "",
+    previewVideo: "/video/tiger-short.mov",
+    fullVideo: "https://www.youtube.com/embed/zf_1x_PCJbM",
+    authorship: "Created Entirely by Damian Seals",
+    roles: ["Writer", "Director", "Director of Photography", "Gaffer", "Editor", "Colorist"],
+    description: "",
+    tools: ["Sony A7iv", "Davinci Resolve", "C-Stand"],
     featured: "true"
   },
 ];
