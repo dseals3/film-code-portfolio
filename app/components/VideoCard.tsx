@@ -12,51 +12,69 @@ type WorkItem = {
 };
 
 export default function VideoCard({ item }: { item: WorkItem }) {
-  return (
-    <Link href={`/projects/${item.slug}`}>
-        <div className={"group relative bg-zinc-900 rounded-xl hover:bg-zinc-800 transition overflow-hidden"}>
-            {/* VIDEO */}
-            <div className={`relative
-                ${item.type === "vertical"
-                ? "aspect-[9/16] max-w-[360px]"
-                : "aspect-video"
+    const isVertical = item.type === "vertical";
+    return (
+    
+    <Link href={`/projects/${item.slug}`}
+        className="group block relative bg-zinc-900 rounded-xl hover:bg-zinc-800 transition overflow-hidden self-start"
+        >
+            
+            {/* VIDEO WRAPPER */}
+            <div className={`relative w-full overflow-hidden
+                ${isVertical ? "aspect-[9/16]" : "aspect-video"
             }`}>
                 <video
-                    className="w-full h-64 object-cover"
-                    src={item.previewVideo}
+                    className="w-full h-full object-cover"
+                    src={item.previewVideo || undefined}
                     muted
                     loop
                     playsInline
                     onMouseOver={(e) => e.currentTarget.play()}
                     onMouseOut={(e) => e.currentTarget.pause()}
                 />
+            {/* Hover CTA */}
             <div className="absolute top-4 right-4 z-10">
                 <div className="px-3 py-1 text-sm text-gray-300 bg-black/60 text-white rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition">
                     View project →
                 </div>
             </div>
+
+            {/* VERTICAL OVERLAY ONLY */}
+            {isVertical && (
+                <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
+                    <div className="flex justify-between text-xs text-gray-300 uppercase mb-2">
+                        <span>{item.type}</span>
+                        <span>{item.year}</span>
+                    </div>
+
+                    <h3 className="text-lg font-semibold text-white">
+                        {item.title}
+                    </h3>
+
+                    <p className="text-sm text-gray-300 line-clamp-3">
+                        {item.description}
+                    </p>
+                </div>
+            )}
         </div>
 
-            {/* TEXT OVERLAY */}
-            <div className="p-6 flex-col space-y-3">
+        {/* TEXT OVERLAY */}
+        {!isVertical && (
+            <div className="p-5 space-y-3">
+                <div className="flex justify-between text-xs text-gray-400 uppercase">
+                    <span>{item.type}</span>
+                    <span>{item.year}</span>
+                </div>
 
-            {/* TOP ROW (type + year separated properly) */}
-            <div className="flex justify-between text-sm text-gray-400 uppercase">
-                <span>{item.type}</span>
-                <span>{item.year}</span>
+                <h3 className="text-xl font-semibold text-white">
+                    {item.title}
+                </h3>
+
+                <p className="text-sm text-gray-400 line-clamp-3">
+                    {item.description}
+                </p>
             </div>
-
-            {/* TITLE */}
-            <h3 className="text-xl font-semibold">
-                {item.title}
-            </h3>
-
-            {/* DESCRIPTION */}
-            <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
-                {item.description}
-            </p>
-            </div>
-        </div>
+        )}
     </Link>
   );
 }
