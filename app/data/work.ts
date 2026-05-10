@@ -11,7 +11,7 @@ export const work = [
     authorship: "Created Entirely by Damian Seals",
     description: "After taking a gap year to pursue my life's goal of becoming a youtuber and not seeing any progress, I share the 3 most important lessons I'd learned in that gap year.",
     tools: ["Davinci Resolve"],
-    featured: "true"
+    featured: true
   },
   {
     slug: "i-need-a-hero-commercial",
@@ -24,7 +24,7 @@ export const work = [
     roles: ["Grip"],
     description: "Set within a hospital, LiveOnNY's public service campaign centers on a patient in need of a life-saving organ, as family members and loved ones deliver a somber and deeply moving rendition of the 1980s hit song, “Holding Out for a Hero,” by Bonnie Tyler. LiveOnNY.org",
     tools: ["Lights", "C-Stands"],
-    featured: "true"
+    featured: true
   },
   {
     slug: "kpreme-pink-lemonade",
@@ -37,7 +37,7 @@ export const work = [
     roles: ["1st Assistant Camera"],
     description: "",
     tools: ["Blackmagic Pocket 6k Pro"],
-    featured: "true"
+    featured: true
   },
   {
     slug: "dear-david",
@@ -50,7 +50,7 @@ export const work = [
     roles: ["Director of Photography", "Colorist"],
     description: "",
     tools: ["Sony A7iv", "Sony FX30", "Davinci Resolve", "Amaran 300c", "C-Stand"],
-    featured: "true"
+    featured: true
   },
   {
     slug: "portfolio-site",
@@ -63,7 +63,7 @@ export const work = [
     roles: [""],
     description: "Built with Next.js as a Film x Code portfolio",
     tools: ["Next.js"],
-    featured: "true"
+    featured: true
   },
   {
     slug: "an-active-day-in-my-life",
@@ -77,6 +77,6 @@ export const work = [
     roles: ["Writer", "Director", "Director of Photography", "Gaffer", "Editor", "Colorist"],
     description: "",
     tools: ["Sony A7iv", "Davinci Resolve", "C-Stand"],
-    featured: "false"
+    featured: false
   },
 ];

@@ -32,8 +32,10 @@ export default function Home() {
         <h2 className="text-2xl font-semibold mb-8">Selected Work</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
-          {work.map((item) => (
-            <VideoCard key={item.slug} item={item} />
+          {work
+            .filter((item) => item.featured)
+            .map((item) => (
+              <VideoCard key={item.slug} item={item} />
           ))}
         </div>
       </section>
