@@ -18,14 +18,17 @@ export default function Home() {
           <div className="mt-10 flex gap-4 justify-center">
             <a
               href="#selected-work"
-              className="px-6 py-3 bg-white text-black rounded-full transition hover:scale-105 hover:bg-zinc-200"
+              className="px-6 py-3 bg-white text-black rounded-full transition ease-in-out hover:scale-105 hover:bg-zinc-200"
             >
               View Work
             </a>
 
-            <button className="px-6 py-3 border border-white rounded-full">
+            <a
+              href="#contact"
+              className="px-6 py-3 border border-white rounded-full transition ease-in-out hover:scale-102 hover:bg-white/10 hover:backdrop-blur-sm"
+            >
               Contact
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -53,7 +56,7 @@ export default function Home() {
       </section>
 
       {/* CONTACT */}
-      <section className="py-24 px-6 text-center border-t border-zinc-800">
+      <section id="contact" className="py-24 px-6 text-center border-t border-zinc-800">
         <h2 className="text-2xl font-semibold">Contact</h2>
         <p className="mt-4 text-gray-400">Damian Seals</p>
         <p className="text-gray-400">macadamianseals@gmail.com</p>
