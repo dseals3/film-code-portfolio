@@ -16,9 +16,12 @@ export default function Home() {
           </p>
 
           <div className="mt-10 flex gap-4 justify-center">
-            <button className="px-6 py-3 bg-white text-black rounded-full">
+            <a
+              href="#selected-work"
+              className="px-6 py-3 bg-white text-black rounded-full transition hover:scale-105 hover:bg-zinc-200"
+            >
               View Work
-            </button>
+            </a>
 
             <button className="px-6 py-3 border border-white rounded-full">
               Contact
@@ -28,7 +31,7 @@ export default function Home() {
       </section>
 
       {/* WORK PREVIEW */}
-      <section className="py-24 px-6 max-w-5xl mx-auto">
+      <section id="selected-work" className="py-24 px-6 max-w-5xl mx-auto">
         <h2 className="text-2xl font-semibold mb-8">Selected Work</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
