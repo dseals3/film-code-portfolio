@@ -25,13 +25,13 @@ export default function VideoPlayer({ src, thumbnail }: Props) {
           />
 
           {/* Play button overlay */}
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div
               className="
-                w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 
-                flex items-center justify-center
-                opacity-0 scale-85
-                group-hover:opacity-100 group-hover:scale-100
+                w-16 h-16 rounded-full bg-white/10 backdrop-blur-md 
+                flex items-center justify-center 
+                opacity-70 scale-85 border border-white/10
+                group-hover:opacity-100 group-hover:scale-100 group-hover:border-white/20 
                 transition-all duration-300 ease-out
               "
             >
