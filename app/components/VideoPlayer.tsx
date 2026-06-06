@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { buildVideoUrl } from "@/lib/video";
 type Props = {
   src: string;
@@ -9,12 +9,26 @@ type Props = {
 
 export default function VideoPlayer({ src, thumbnail }: Props) {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isTouch, setIsTouch] = useState(false);
+
+  useEffect(() => {
+    setIsTouch(
+      "ontouchstart" in window ||
+      navigator.maxTouchPoints > 0
+    );
+  }, []);
+
+  useEffect(() => {
+    if (isTouch) {
+      setIsLoaded(true);
+    }
+  }, [isTouch]);
 
   return (
     <div className="aspect-video w-full max-w-5xl mx-auto mb-8 bg-zinc-900 rounded-xl overflow-hidden relative">
       
       {/* Thumbnail / placeholder */}
-      {!isLoaded && (
+      {!isLoaded && !isTouch && (
         <button
           onClick={() => setIsLoaded(true)}
           className="absolute inset-0 flex items-center justify-center bg-zinc-900 group cursor-pointer"
@@ -44,7 +58,7 @@ export default function VideoPlayer({ src, thumbnail }: Props) {
       )}
 
       {/* iframe only loads after click */}
-      {isLoaded && (
+      {(isLoaded || isTouch) && (
         <iframe
           src={buildVideoUrl(src)}
           className="w-full h-full"
