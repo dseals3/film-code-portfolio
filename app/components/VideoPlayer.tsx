@@ -8,15 +8,15 @@ type Props = {
 };
 
 export default function VideoPlayer({ src, thumbnail }: Props) {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <div className="aspect-video w-full max-w-5xl mx-auto mb-8 bg-zinc-900 rounded-xl overflow-hidden relative">
-      
-      {/* Thumbnail / placeholder */}
-      {!isLoaded && (
+
+      {/* Thumbnail Overlay */}
+      {!isPlaying && (
         <button
-          onClick={() => setIsLoaded(true)}
+          onClick={() => setIsPlaying(true)}
           className="absolute inset-0 flex items-center justify-center bg-zinc-900 group cursor-pointer"
         >
           <img
@@ -43,14 +43,17 @@ export default function VideoPlayer({ src, thumbnail }: Props) {
         </button>
       )}
 
-      {/* iframe only loads after click */}
+      {/* iframe always mounts */}
+      {isPlaying && (
       <iframe
-        src={isLoaded ? buildVideoUrl(src) : undefined}
-        className="w-full h-full"
+        src={buildVideoUrl(src)}
+        className={`absolute inset-0 w-full h-full transition-opacity duration-300 ${
+          isPlaying ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
         allow="autoplay; encrypted-media; fullscreen"
         allowFullScreen
-      
       />
+      )}
     </div>
   );
 }
