@@ -35,7 +35,7 @@ export const work = [
     previewVideo: "/video/kpreme-prv.mp4",
     fullVideo: "https://www.youtube.com/embed/IjDnBJbnPTM",
     roles: ["1st Assistant Camera"],
-    description: "",
+    description: "Official Music Video for Pink Lemonade performed by Kpreme",
     tools: ["Blackmagic Pocket 6k Pro"],
     featured: true
   },
@@ -48,7 +48,7 @@ export const work = [
     previewVideo: "/video/dear-david-prv.mp4",
     fullVideo: "https://www.youtube.com/embed/XZF__F6svTU",
     roles: ["Director of Photography", "Colorist"],
-    description: "",
+    description: "Months after the death of his wife, David prepares to move on. But when a discovery among her belongings reveals an unexpected chapter of her past, he is forced to confront the complicated legacy she left behind.\n\nCreated as part of the Knoxville 7-Day Shootout film challenge, this character-driven drama explores grief, memory, and the search for closure.\n\nThe film was recognized with nominations across multiple categories, including Best Film, Directing, Cinematography, Writing, Sound Design, Use of Music, and Best Actor in a Leading Role. It also earned 3rd Place in the Audience Favorite category, while its director received the Emerging Filmmaker Award.",
     tools: ["Sony A7iv", "Sony FX30", "Davinci Resolve", "Amaran 300c", "C-Stand"],
     featured: true
   },
@@ -61,8 +61,8 @@ export const work = [
     previewVideo: "/video/code-prv.mp4",
     fullVideo: "",
     roles: [""],
-    description: "Built with Next.js as a Film x Code portfolio",
-    tools: ["Next.js"],
+    description: "A custom-built portfolio created to showcase my work in filmmaking and visual storytelling. Built from the ground up using Next.js, TypeScript, and Tailwind CSS, the site was designed with an emphasis on performance, intuitive navigation, and a viewing experience tailored to creative work.",
+    tools: ["Next.js", "TypeScript", "Tailwind CSS"],
     featured: true
   },
   {
