@@ -32,7 +32,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           {project.title}
         </h1>
 
-        <p className="text-gray-400 leading-relaxed">
+        <p className="text-gray-400 leading-relaxed whitespace-pre-line">
           {project.description}
         </p>
         
