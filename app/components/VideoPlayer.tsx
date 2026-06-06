@@ -44,14 +44,27 @@ export default function VideoPlayer({ src, thumbnail }: Props) {
       )}
 
       {/* Thumbnail Overlay */}
-      {!showPlayer && (
         <button
           onClick={() => setShowPlayer(true)}
-          className="absolute inset-0 flex items-center justify-center bg-zinc-900 group cursor-pointer"
+          className={`
+            absolute inset-0 z-10 flex items-center justify-center
+            bg-zinc-900 group cursor-pointer
+            transition-opacity duration-700 ease-out
+            ${
+              showPlayer
+                ? "opacity-0 pointer-events-none"
+                : "opacity-100"
+            }
+          `}
         >
           <img
             src={thumbnail}
-            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition"
+            className="
+              w-full h-full object-cover
+              opacity-80 group-hover:opacity-100
+              scale-100 group-hover:scale-104
+              transition-all duration-700 ease-out
+            "
           />
 
           {/* Play button overlay */}
@@ -71,19 +84,6 @@ export default function VideoPlayer({ src, thumbnail }: Props) {
             </div>
           </div>
         </button>
-      )}
-
-      {/* iframe always mounts */}
-      {/* {isPlaying && (
-      <iframe
-        src={buildVideoUrl(src)}
-        className={`absolute inset-0 w-full h-full transition-opacity duration-300 ${
-          isPlaying ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-        allow="autoplay; encrypted-media; fullscreen"
-        allowFullScreen
-      />
-      )} */}
     </div>
   );
 }
