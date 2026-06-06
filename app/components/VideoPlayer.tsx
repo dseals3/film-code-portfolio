@@ -48,7 +48,7 @@ export default function VideoPlayer({ src, thumbnail }: Props) {
         <iframe
           src={buildVideoUrl(src)}
           className="w-full h-full"
-          allow="autoplay; fullscreen"
+          allow="autoplay; encrypted-media; fullscreen"
           allowFullScreen
         
         />
