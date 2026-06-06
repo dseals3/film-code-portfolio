@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { buildVideoUrl } from "@/lib/video";
 type Props = {
   src: string;
@@ -8,15 +8,45 @@ type Props = {
 };
 
 export default function VideoPlayer({ src, thumbnail }: Props) {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isTouch, setIsTouch] = useState(false);
+  const [showPlayer, setShowPlayer] = useState(false);
+
+   useEffect(() => {
+    setIsTouch(
+      "ontouchstart" in window ||
+      navigator.maxTouchPoints > 0
+    );
+  }, []);
 
   return (
     <div className="aspect-video w-full max-w-5xl mx-auto mb-8 bg-zinc-900 rounded-xl overflow-hidden relative">
 
+      {/* MOBILE: preload hidden iframe */}
+      {isTouch && (
+        <iframe
+          src={buildVideoUrl(src).replace("autoplay=1", "autoplay=0")}
+          className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
+            showPlayer ? "opacity-100" : "opacity-0"
+          }`}
+          allow="autoplay; fullscreen"
+          allowFullScreen
+        />
+      )}
+
+      {/* DESKTOP: original behavior */}
+      {!isTouch && showPlayer && (
+        <iframe
+          src={buildVideoUrl(src)}
+          className="absolute inset-0 w-full h-full"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+        />
+      )}
+
       {/* Thumbnail Overlay */}
-      {!isPlaying && (
+      {!showPlayer && (
         <button
-          onClick={() => setIsPlaying(true)}
+          onClick={() => setShowPlayer(true)}
           className="absolute inset-0 flex items-center justify-center bg-zinc-900 group cursor-pointer"
         >
           <img
@@ -44,7 +74,7 @@ export default function VideoPlayer({ src, thumbnail }: Props) {
       )}
 
       {/* iframe always mounts */}
-      {isPlaying && (
+      {/* {isPlaying && (
       <iframe
         src={buildVideoUrl(src)}
         className={`absolute inset-0 w-full h-full transition-opacity duration-300 ${
@@ -53,7 +83,7 @@ export default function VideoPlayer({ src, thumbnail }: Props) {
         allow="autoplay; encrypted-media; fullscreen"
         allowFullScreen
       />
-      )}
+      )} */}
     </div>
   );
 }
