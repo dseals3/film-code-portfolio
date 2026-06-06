@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 type WorkItem = {
     slug: string;
@@ -13,6 +14,29 @@ type WorkItem = {
 
 export default function VideoCard({ item }: { item: WorkItem }) {
     const isVertical = item.type === "vertical";
+    const videoRef = useRef<HTMLVideoElement>(null);
+    useEffect(() => {
+        const video = videoRef.current;
+
+        if (!video) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+            if (entry.isIntersecting) {
+                video.play().catch(() => {});
+            } else {
+                video.pause();
+            }
+            },
+            {
+            threshold: 0.25,
+            }
+        );
+
+        observer.observe(video);
+
+        return () => observer.disconnect();
+        }, []);
     return (
     
     <Link href={`/projects/${item.slug}`}
@@ -24,13 +48,14 @@ export default function VideoCard({ item }: { item: WorkItem }) {
                 ${isVertical ? "aspect-[9/16]" : "aspect-video"
             }`}>
                 <video
+                    ref={videoRef}
                     className="w-full h-full object-cover"
                     src={item.previewVideo || undefined}
+                    autoPlay
                     muted
                     loop
                     playsInline
-                    onMouseOver={(e) => e.currentTarget.play()}
-                    onMouseOut={(e) => e.currentTarget.pause()}
+                    preload="metadata"
                 />
             {/* Hover CTA */}
             <div className="absolute top-4 right-4 z-10">
