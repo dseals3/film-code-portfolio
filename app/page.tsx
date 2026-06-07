@@ -1,5 +1,7 @@
 import VideoCard from "./components/VideoCard";
 import { work } from "./data/work";
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
@@ -12,7 +14,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-gray-300">
-            I build for the web - and I shoot for it.
+            I focus on cinematic storytelling across narrative and commercial.
           </p>
 
           <div className="mt-10 flex gap-4 justify-center">
@@ -44,15 +46,26 @@ export default function Home() {
               <VideoCard key={item.slug} item={item} />
           ))}
         </div>
+        <p className="mt-12 text-center text-gray-500 text-sm">
+          Selected work from recent film and digital projects.
+        </p>
       </section>
+      
 
       {/* ABOUT */}
       <section className="py-24 px-6 max-w-3xl mx-auto text-center">
         <h2 className="text-2xl font-semibold">About</h2>
         <p className="mt-6 text-gray-300">
-          I work across filmmaking and web development, exploring how narrative,
-          motion, and interaction can come together in the browser.
+          I'm a filmmaker focused on cinematic storytelling, with an emphasis
+          on mood, pacing, and visual clarity.
         </p>
+
+        <Link
+            href="/about"
+            className="inline-block mt-8 text-sm text-gray-400 hover:text-white transition"
+          >
+            Read More →
+        </Link>
       </section>
 
       {/* CONTACT */}
@@ -62,6 +75,9 @@ export default function Home() {
         <p className="text-gray-400">macadamianseals@gmail.com</p>
       </section>
 
+      <footer className="py-12 text-center text-gray-500 text-sm border-t border-zinc-800">
+        © {new Date().getFullYear()} Damian Seals
+      </footer>
     </main>
   );
 }
