@@ -61,6 +61,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             ))}
         </div>
       </div>
+      <footer className="mt-12 py-12 text-center text-gray-500 text-sm border-t border-zinc-800">
+        © {new Date().getFullYear()} Damian Seals
+      </footer>
     </main>
   );
 }
