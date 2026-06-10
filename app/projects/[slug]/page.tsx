@@ -43,7 +43,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             </p>
         )}
 
-        <div className="mt-6 flex flex-wrap items-center gap-2">
+        {/* ROLES */}
+        <div className="mt-6 mb-12 flex flex-wrap items-center gap-2">
             {project.roles.map((role) => (
                 <span key={role}
                     className="
@@ -61,6 +62,30 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </span>
             ))}
         </div>
+
+        {/* TOOLS USED */}
+        <p className="text-xs uppercase tracking-widest text-gray-500">
+          Tools Used
+        </p>
+        <div className="flex flex-wrap items-center gap-2">
+            {project.tools.map((tool) => (
+                <span key={tool}
+                    className="
+                        px-2.5 py-1
+                        text-xs tracking-wide
+                        rounded-md
+                        bg-white/5
+                        text-gray-400
+                        hover:bg-white/10
+                        cursor-pointer
+                        hover:text-white
+                        transition"
+                >
+                    {tool}
+                </span>
+            ))}
+        </div>
+
       </div>
       <Footer /> 
     </main>
