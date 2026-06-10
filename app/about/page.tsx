@@ -2,7 +2,7 @@ export default function About() {
   return (
     <main className="min-h-screen flex flex-col bg-black text-white px-6 pt-24">
         {/* HEADER */}
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto w-full">
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
                 About
             </h1>
@@ -12,7 +12,7 @@ export default function About() {
             </p>
         </div>
         {/* IMAGE + TEXT BLOCK */}
-        <div className="max-w-3xl mx-auto mt-12 flex flex-col md:flex-row items-start gap-8">
+        <div className="max-w-3xl mx-auto w-full mt-12 flex flex-col md:flex-row items-start gap-8">
 
             {/* IMAGE */}
             <div className="md:w-1/3 flex-shrink-0">
