@@ -38,10 +38,6 @@ export default function About() {
                 </p>
             </div>
         </div>
-        <div className="max-w-2xl mx-auto mt-16 border-t border-zinc-800 pt-8">
-            <p className="text-gray-400">Contact</p>
-            <p className="text-white mt-2">macadamianseals@gmail.com</p>
-        </div>
 
         <div className="flex-1" />
 
