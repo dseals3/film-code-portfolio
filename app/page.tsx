@@ -1,4 +1,5 @@
 import VideoCard from "./components/VideoCard";
+import Footer from "./components/Footer";
 import { work } from "./data/work";
 import Link from "next/link";
 
@@ -67,17 +68,7 @@ export default function Home() {
             Read More →
         </Link>
       </section>
-
-      {/* CONTACT */}
-      <section id="contact" className="py-24 px-6 text-center border-t border-zinc-800">
-        <h2 className="text-2xl font-semibold">Contact</h2>
-        <p className="mt-4 text-gray-400">Damian Seals</p>
-        <p className="text-gray-400">macadamianseals@gmail.com</p>
-      </section>
-
-      <footer className="py-12 text-center text-gray-500 text-sm border-t border-zinc-800">
-        © {new Date().getFullYear()} Damian Seals
-      </footer>
+      <Footer />
     </main>
   );
 }
