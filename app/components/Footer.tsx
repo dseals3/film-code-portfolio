@@ -16,7 +16,7 @@ export default function Footer() {
         }, 2000);
     }
     return (
-    <footer className="mt-24 border-t border-zinc-800">
+    <footer id="contact" className="mt-24 border-t border-zinc-800">
         <div className="max-w-5xl mx-auto px-6 py-16 text-center">
 
           <h2 className="text-2xl font-semibold">
