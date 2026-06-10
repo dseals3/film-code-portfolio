@@ -54,7 +54,7 @@ export default function Home() {
       
 
       {/* ABOUT */}
-      <section className="py-24 px-6 max-w-3xl mx-auto text-center">
+      <section className="pt-24 pb-12 px-6 max-w-3xl mx-auto text-center">
         <h2 className="text-2xl font-semibold">About</h2>
         <p className="mt-6 text-gray-300">
           I'm a filmmaker focused on cinematic storytelling, with an emphasis
