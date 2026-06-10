@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+
 export default function About() {
   return (
     <main className="min-h-screen flex flex-col bg-black text-white px-6 pt-24">
@@ -43,9 +45,7 @@ export default function About() {
 
         <div className="flex-1" />
 
-        <footer className="py-12 text-center text-gray-500 text-sm border-t border-zinc-800">
-            © {new Date().getFullYear()} Damian Seals
-        </footer>
+        <Footer />
     </main>
   );
 }
