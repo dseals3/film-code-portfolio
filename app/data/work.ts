@@ -86,6 +86,7 @@ export const work = [
     previewVideo: "/video/code-prv.mp4",
     fullVideo: "",
     roles: [""],
+    authorship: "Created Entirely by Damian Seals",
     description: "A custom-built portfolio created to showcase my work in filmmaking and visual storytelling. Built from the ground up using Next.js, TypeScript, and Tailwind CSS, the site was designed with an emphasis on performance, intuitive navigation, and a viewing experience tailored to creative work.",
     tools: ["Next.js", "TypeScript", "Tailwind CSS", "Git", "Vercel"],
     btsImages: [],
