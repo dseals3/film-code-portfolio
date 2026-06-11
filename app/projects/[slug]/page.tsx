@@ -85,7 +85,25 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </span>
             ))}
         </div>
+        {project.btsImages && project.btsImages.length > 0 && (
+          <section className="mt-16">
+            <h2 className="text-xs uppercase tracking-widest text-gray-500 mb-6">
+              Behind the Scenes
+            </h2>
 
+            {/* GALLERY */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {project.btsImages.map((image) => (
+                <img
+                  key={image}
+                  src={image}
+                  alt=""
+                  className="rounded-xl object-cover w-full"
+                />
+              ))}
+            </div>
+          </section>
+        )}
       </div>
       <Footer /> 
     </main>
