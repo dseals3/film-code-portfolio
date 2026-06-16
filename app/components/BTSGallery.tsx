@@ -18,8 +18,12 @@ export default function BTSGallery({ images }: Props) {
             key={src}
             src={src}
             onClick={() => setSelected(src)}
-            className="w-full rounded-lg cursor-pointer break-inside-avoid mb-4
-                       transition duration-500 ease-out hover:scale-[1.03] hover:brightness-110"
+            className="
+                w-full rounded-lg cursor-pointer 
+                break-inside-avoid mb-4
+                transition duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+                hover:scale-[1.03] hover:brightness-110 hover:contrast-105
+                hover:-translate-y-1"
           />
         ))}
       </div>
