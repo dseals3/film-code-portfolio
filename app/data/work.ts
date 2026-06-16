@@ -49,7 +49,6 @@ export const work = [
     tools: ["Blackmagic Pocket 6k Pro", "Plexiglass Platform"],
     btsImages: [
       "/images/pink-lemonade/pl-bts-1.jpg",
-      "/images/pink-lemonade/pl-bts-2.jpg",
       "/images/pink-lemonade/pl-bts-3.jpg",
       "/images/pink-lemonade/pl-bts-4.jpg",
       "/images/pink-lemonade/pl-bts-5.jpg",
