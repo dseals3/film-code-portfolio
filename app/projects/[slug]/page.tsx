@@ -1,5 +1,7 @@
 import { work } from "../../data/work";
+
 import VideoPlayer from "../../components/VideoPlayer";
+import BTSGallery from "../../components/BTSGallery"
 import Footer from "../../components/Footer";
 
 export async function generateStaticParams() {
@@ -86,6 +88,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             ))}
         </div>
         {/* BEHIND THE SCENES PHOTOS */}
+        
         {project.btsImages && project.btsImages.length > 0 && (
           <section className="mt-16">
             <h2 className="text-xs uppercase tracking-widest text-gray-500 mb-6">
@@ -93,16 +96,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             </h2>
 
             {/* GALLERY */}
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
-              {project.btsImages.map((image) => (
-                <img
-                  key={image}
-                  src={image}
-                  alt=""
-                  className="w-full rounded-lg break-inside-avoid mb-4 hover:scale-[1.02] transition duration-300"
-                />
-              ))}
-            </div>
+            <BTSGallery images={project.btsImages} />
           </section>
         )}
       </div>
