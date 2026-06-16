@@ -7,17 +7,34 @@ type Props = {
 };
 
 export default function BTSGallery({ images }: Props) {
-  const [selected, setSelected] = useState<string | null>(null);
+    const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+    const currentImage =
+  selectedIndex !== null ? images[selectedIndex] : null;
 
-  return (
+    const close = () => setSelectedIndex(null);
+
+    const goNext = (e?: React.MouseEvent) => {
+        e?.stopPropagation();
+        if (selectedIndex === null) return;
+        setSelectedIndex((selectedIndex + 1) % images.length);
+    };
+
+    const goPrev = (e?: React.MouseEvent) => {
+        e?.stopPropagation();
+        if (selectedIndex === null) return;
+        setSelectedIndex(
+            (selectedIndex - 1 + images.length) % images.length
+        );
+    };
+    return (
     <> 
       {/* GRID */}
       <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
-        {images.map((src) => (
+        {images.map((src, index) => (
           <img
             key={src}
             src={src}
-            onClick={() => setSelected(src)}
+            onClick={() => setSelectedIndex(index)}
             className="
                 w-full rounded-lg cursor-pointer 
                 break-inside-avoid mb-4
@@ -29,17 +46,34 @@ export default function BTSGallery({ images }: Props) {
       </div>
 
       {/* LIGHTBOX */}
-      {selected && (
+      {selectedIndex !== null && (
         <div
-          className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
-          onClick={() => setSelected(null)}
+            className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
+            onClick={close}
         >
-          <img
-            src={selected}
+            {/* Image */}
+            <img
+            src={currentImage!}
             className="max-h-[90vh] max-w-[90vw] rounded-lg"
-          />
+            />
+
+            {/* LEFT BUTTON */}
+            <button
+            onClick={goPrev}
+            className="absolute left-6 text-white text-3xl opacity-70 hover:opacity-100 transition"
+            >
+            ‹
+            </button>
+
+            {/* RIGHT BUTTON */}
+            <button
+            onClick={goNext}
+            className="absolute right-6 text-white text-3xl opacity-70 hover:opacity-100 transition"
+            >
+            ›
+            </button>
         </div>
-      )}
+        )}
     </>
   );
 }
