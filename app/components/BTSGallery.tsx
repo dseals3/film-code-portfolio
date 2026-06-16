@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type Props = {
   images: string[];
@@ -26,6 +26,29 @@ export default function BTSGallery({ images }: Props) {
             (selectedIndex - 1 + images.length) % images.length
         );
     };
+
+    useEffect(() => {
+        const handleKey = (e: KeyboardEvent) => {
+            if (selectedIndex === null) return;
+
+            if (e.key === "ArrowRight") {
+            setSelectedIndex((prev) => (prev! + 1) % images.length);
+            }
+
+            if (e.key === "ArrowLeft") {
+            setSelectedIndex((prev) =>
+                (prev! - 1 + images.length) % images.length
+            );
+            }
+
+            if (e.key === "Escape") {
+            setSelectedIndex(null);
+            }
+        };
+
+        window.addEventListener("keydown", handleKey);
+        return () => window.removeEventListener("keydown", handleKey);
+        }, [selectedIndex, images.length]);
     return (
     <> 
       {/* GRID */}
