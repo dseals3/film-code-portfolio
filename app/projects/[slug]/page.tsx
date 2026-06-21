@@ -87,6 +87,58 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </span>
             ))}
         </div>
+        {project.techStack && (
+          <section className="mt-12">
+            <h2 className="text-xl font-semibold mb-4">Tech Stack</h2>
+
+            <div className="flex flex-wrap gap-2">
+              {project.techStack.map((tech) => (
+                <span
+                  key={tech}
+                  className="px-3 py-1 rounded-full bg-white/10 text-sm"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {project.contributions && (
+          <section className="mt-12">
+            <h2 className="text-xl font-semibold mb-4">
+              My Contributions
+            </h2>
+
+            <p className="leading-relaxed text-gray-400">
+              {project.contributions}
+            </p>
+          </section>
+        )}
+
+        {project.challenges && (
+          <section className="mt-12">
+            <h2 className="text-xl font-semibold mb-4">
+              Challenges
+            </h2>
+
+            <p className="leading-relaxed text-gray-400">
+              {project.challenges}
+            </p>
+          </section>
+        )}
+
+        {project.learnings && (
+          <section className="mt-12">
+            <h2 className="text-xl font-semibold mb-4">
+              What I learned
+            </h2>
+
+            <p className="leading-relaxed text-gray-400">
+              {project.learnings}
+            </p>
+          </section>
+        )}
         {/* BEHIND THE SCENES PHOTOS */}
         
         {project.btsImages && project.btsImages.length > 0 && (
