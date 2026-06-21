@@ -10,7 +10,9 @@ export const work = [
     roles: ["Writer", "Director", "Director of Photography", "Gaffer", "Editor", "Colorist"],
     authorship: "Created Entirely by Damian Seals",
     description: "After taking a gap year to pursue my life's goal of becoming a youtuber and not seeing any progress, I share the 3 most important lessons I'd learned in that gap year.",
-    tools: ["Sony a7iv", "Sony ZV-E1", "DJI Mini 3 Pro", "Custom Drop Rig", "Lights", "Stands", "Hazer", "Davinci Resolve",],
+    meta: {
+      tools: ["Sony a7iv", "Sony ZV-E1", "DJI Mini 3 Pro", "Custom Drop Rig", "Lights", "Stands", "Hazer", "Davinci Resolve",]
+    },
     btsImages: [
       "/images/dontgiveup/240.jpg",
       "/images/dontgiveup/cam-blue.jpg"
@@ -27,7 +29,9 @@ export const work = [
     fullVideo: "https://www.youtube.com/embed/tNKRdvi7OiI",
     roles: ["Grip"],
     description: "Set within a hospital, LiveOnNY's public service campaign centers on a patient in need of a life-saving organ, as family members and loved ones deliver a somber and deeply moving rendition of the 1980s hit song, “Holding Out for a Hero,” by Bonnie Tyler. LiveOnNY.org",
-    tools: ["Lights", "C-Stands"],
+    meta: {
+      tools: ["Lights", "C-Stands"]
+    },
     btsImages: [
       "/images/liveonNY/ny-bts-1.jpg",
       "/images/liveonNY/ny-bts-2.jpg",
@@ -45,8 +49,10 @@ export const work = [
     previewVideo: "/video/kpreme-prv.mp4",
     fullVideo: "https://www.youtube.com/embed/IjDnBJbnPTM",
     roles: ["1st Assistant Camera"],
+    meta: {
+      tools: ["Blackmagic Pocket 6k Pro", "Plexiglass Platform"]
+    },
     description: "Official Music Video for Pink Lemonade performed by Kpreme",
-    tools: ["Blackmagic Pocket 6k Pro", "Plexiglass Platform"],
     btsImages: [
       "/images/pink-lemonade/pl-bts-1.jpg",
       "/images/pink-lemonade/pl-bts-3.jpg",
@@ -68,6 +74,9 @@ export const work = [
     fullVideo: "https://www.youtube.com/embed/XZF__F6svTU",
     roles: ["Director of Photography", "Colorist"],
     description: "Months after the death of his wife, David prepares to move on. But when a discovery among her belongings reveals an unexpected chapter of her past, he is forced to confront the complicated legacy she left behind.\n\nCreated as part of the Knoxville 7-Day Shootout film challenge, this character-driven drama explores grief, memory, and the search for closure.\n\nThe film was recognized with nominations across multiple categories, including Best Film, Directing, Cinematography, Writing, Sound Design, Use of Music, and Best Actor in a Leading Role. It also earned 3rd Place in the Audience Favorite category, while its director received the Emerging Filmmaker Award.",
+    meta: {
+      tools: ["Sony A7iv", "Sony FX30", "Amaran 300c", "C-Stand", "Davinci Resolve"]
+    },
     tools: ["Sony A7iv", "Sony FX30", "Amaran 300c", "C-Stand", "Davinci Resolve"],
     btsImages: [
       "/images/dear-david/dd-bts-1.jpg",
@@ -85,6 +94,9 @@ export const work = [
     previewVideo: "/video/code-prv.mp4",
     fullVideo: "",
     roles: ["Designer", "Developer", "Site Owner"],
+    meta: {
+      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"]
+    },
     techStack: [
       "Next.js",
       "TypeScript",
