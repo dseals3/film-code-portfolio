@@ -1,4 +1,5 @@
 import { work } from "../../data/work";
+import type { MetaKey } from "../../data/types";
 
 import VideoPlayer from "../../components/VideoPlayer";
 import BTSGallery from "../../components/BTSGallery"
@@ -9,13 +10,20 @@ export async function generateStaticParams() {
     slug: item.slug,
   }));
 }
+
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
     const project = work.find((item) => item.slug === slug);
+    const metaLabels: Record<MetaKey, string> = {
+      tech: "Tech Stack",
+      tools: "Tools Used",
+    };
 
     if (!project) {
         return <div className="p-10 text-white">Project not found</div>;
     }
+    
+    const meta = project.meta ?? {};
 
     return (
     <main className="min-h-screen bg-black text-white p-8">
@@ -65,44 +73,40 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             ))}
         </div>
 
-        {/* TOOLS USED */}
-        <p className="text-xs uppercase tracking-widest text-gray-500">
-          Tools Used
-        </p>
-        <div className="flex flex-wrap items-center gap-2">
-            {project.tools.map((tool) => (
-                <span key={tool}
-                    className="
-                        px-2.5 py-1
-                        text-xs tracking-wide
-                        rounded-md
-                        bg-white/5
-                        text-gray-400
-                        hover:bg-white/10
-                        cursor-pointer
-                        hover:text-white
-                        transition"
-                >
-                    {tool}
-                </span>
-            ))}
-        </div>
-        {project.techStack && (
-          <section className="mt-12">
-            <h2 className="text-xl font-semibold mb-4">Tech Stack</h2>
+        {/* TOOLS or TECH STACK */}
+        {(Object.entries(project.meta ?? {}) as [MetaKey, string[]][])
+          .map(([key, items]) => {
+        const label = metaLabels[key as MetaKey];
 
-            <div className="flex flex-wrap gap-2">
-              {project.techStack.map((tech) => (
+        return (
+          <div key={key}>
+            <p className="text-xs uppercase tracking-widest text-gray-500 mb-4">
+              {label}
+            </p>
+
+            <div className="flex flex-wrap items-center gap-2 mb-4">
+              {items.map((tool) => (
                 <span
-                  key={tech}
-                  className="px-3 py-1 rounded-full bg-white/10 text-sm"
+                  key={tool}
+                  className="
+                    px-2.5 py-1
+                    text-xs tracking-wide
+                    rounded-md
+                    bg-white/5
+                    text-gray-400
+                    hover:bg-white/10
+                    cursor-pointer
+                    hover:text-white
+                    transition
+                  "
                 >
-                  {tech}
+                  {tool}
                 </span>
               ))}
             </div>
-          </section>
-        )}
+          </div>
+        );
+      })}
 
         {project.contributions && (
           <section className="mt-12">
