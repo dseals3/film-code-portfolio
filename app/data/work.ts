@@ -170,7 +170,7 @@ export const work = [
     description: "",
     meta: {
       tools: ["Blackmagic Pocket 6k", "Lights", "Stands", "My Phone"]
-    }
+    },
     btsImages: [],
     featured: false
   },
