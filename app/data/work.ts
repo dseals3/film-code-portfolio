@@ -1,3 +1,4 @@
+import type { Project } from "./types";
 export const work = [
     {
     slug: "for-those-who-feel-like-giving-up",
