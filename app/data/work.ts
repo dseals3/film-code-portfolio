@@ -98,18 +98,11 @@ export const work = [
     meta: {
       tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"]
     },
-    techStack: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Vercel",
-    ],
     authorship: "Created Entirely by Damian Seals",
     description: "A custom-built portfolio created to showcase my work in filmmaking and software engineering in a single cohesive experience. Rather than using a template or a website builder, I designed and developed the site from scratch using modern web technologies, allowing complete control over presentation, performance, and functionality.",
     contributions: "Designed the site's visual identity and user experience, developed the frontend using Next.js, TypeScript, and Tailwind CSS, implemented responsive layouts and reusable components, integrated video and image galleries, and deployed the application to production on a custom domain using Vercel.",
     challenges: "The project required balancing visual presentation with performance, particularly when working with large media assets. I implemented responsive layouts, optimized video previews, configured custom domain routing and DNS records, and resolved deployment and production issues that differed from local development environments.",
     learnings: "Building and maintaining the site provided experience across the entire application lifecycle, from architecture and frontend development to deployment, troubleshooting, and ongoing maintenance. The project strengthened my understanding of Next.js, TypeScript, Git workflows, DNS configuration, performance optimization, and production hosting environments.",
-    tools: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
     btsImages: [],
     featured: true
   },
@@ -124,7 +117,9 @@ export const work = [
     authorship: "Created Entirely by Damian Seals",
     roles: ["Writer", "Director", "Director of Photography", "Gaffer", "Editor", "Colorist"],
     description: "",
-    tools: ["Sony A7iv", "GoPro", "Lights", "C-Stand", "Davinci Resolve"],
+    meta: {
+      tools: ["Sony A7iv", "GoPro", "Lights", "C-Stand", "Davinci Resolve"]
+    },
     btsImages: [],
     featured: false
   },
@@ -139,7 +134,9 @@ export const work = [
     authorship: "",
     roles: ["Actor", "Editor", "Colorist"],
     description: "",
-    tools: ["Sony A7iv", "C-Stand", "Davinci Resolve"],
+    meta: {
+      tools: ["Sony A7iv", "C-Stand", "Davinci Resolve"]
+    },
     btsImages: [],
     featured: false
   },
@@ -154,7 +151,9 @@ export const work = [
     authorship: "A One-Man Production by Damian Seals",
     roles: ["Director of Photography", "Gaffer", "Editor", "Colorist"],
     description: "",
-    tools: ["Sony A7iv", "Lights", "C-Stand", "Davinci Resolve"],
+    meta: {
+      tools: ["Sony A7iv", "Lights", "C-Stand", "Davinci Resolve"]
+    },
     btsImages: [],
     featured: false
   },
@@ -169,7 +168,9 @@ export const work = [
     authorship: "",
     roles: ["2nd AC"],
     description: "",
-    tools: ["Blackmagic Pocket 6k", "Lights", "Stands", "My Phone"],
+    meta: {
+      tools: ["Blackmagic Pocket 6k", "Lights", "Stands", "My Phone"]
+    }
     btsImages: [],
     featured: false
   },
@@ -184,7 +185,9 @@ export const work = [
     authorship: "",
     roles: ["Production Assistant"],
     description: "",
-    tools: ["Blackmagic Pocket 6k", "Lights", "Drill"],
+    meta: {
+      tools: ["Blackmagic Pocket 6k", "Lights", "Drill"]
+    },
     btsImages: [],
     featured: false
   },
@@ -199,7 +202,9 @@ export const work = [
     authorship: "",
     roles: ["Production Assistant", "Background - Recruit"],
     description: "",
-    tools: [],
+    meta: {
+      tools: []
+    },
     btsImages: [],
     featured: false
   },
@@ -214,7 +219,9 @@ export const work = [
     authorship: "Produced and Edited by Damian Seals",
     roles: ["Writer", "Director", "Director of Photography", "Editor", "Colorist"],
     description: "I'm very familiar with the Great Smoky Mountains, Gatlinburg, and Pigeon Forge being a Tennessee native, but climbing up the side of a mountain as high as this just to check something out is not something I do terribly often.\n\nAlso, my thoughts and prayers go out to those families who lost loved ones, were injured, went homeless, or struggled at all as a result of the 2016 fires. They started on the Chimney Tops Trail and expanded into the Great Smoky Mountains National Park, Gatlinburg, Pigeon Forge, all within Sevier County, places I am very familiar with.\n\nLuckily from what I can see, most everyone has recovered from the fires, yet I am sure everyone involved still has a scar to prove it happened, whether that scar is physical, emotional, or financial.",
-    tools: ["iPhone 12", "Rode VideoMic NTG", "Davinci Resolve"],
+    meta: {
+      tools: ["iPhone 12", "Rode VideoMic NTG", "Davinci Resolve"]
+    },
     btsImages: [],
     featured: false
   },
@@ -229,7 +236,9 @@ export const work = [
     authorship: "Produced and Edited by Damian Seals",
     roles: ["Writer", "Director", "Editor", "Colorist"],
     description: "",
-    tools: ["Rode VideoMic NTG", "Davinci Resolve"],
+    meta: {
+      tools: ["Rode VideoMic NTG", "Davinci Resolve"]
+    },
     btsImages: [],
     featured: false
   },
@@ -244,7 +253,9 @@ export const work = [
     authorship: "Produced and Edited by Damian Seals",
     roles: ["Writer", "Director", "Director of Photography", "Actor", "Editor", "VFX Artist", "Colorist"],
     description: "Created as a part of a 7-Day Reel Competition in pursuit of winning an FX30. The prompt was to 'Make a reel about something you're passionate about', and while I did not win, I did however tag Earth Runners, the company, and secure a working relationship that got me a free pair of sandals and later a sponsorship with them.",
-    tools: ["Sony a7iv", "GoPro", "Lights", "C-Stand", "Rode VideoMic NTG", "Davinci Resolve"],
+    meta: {
+      tools: ["Sony a7iv", "GoPro", "Lights", "C-Stand", "Rode VideoMic NTG", "Davinci Resolve"]
+    },
     btsImages: [],
     featured: false
   },
