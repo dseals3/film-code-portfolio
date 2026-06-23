@@ -1,7 +1,8 @@
 import { work } from "../../data/work";
-import type { MetaKey } from "../../data/types";
 
-import VideoPlayer from "../../components/VideoPlayer";
+
+import VideoPlayer from "../../components/VideoPlayer"
+import ProjectMeta from "../../components/ProjectMeta"
 import BTSGallery from "../../components/BTSGallery"
 import Footer from "../../components/Footer";
 
@@ -14,23 +15,17 @@ export async function generateStaticParams() {
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
     const project = work.find((item) => item.slug === slug);
-    const metaLabels: Record<MetaKey, string> = {
-      tech: "Tech Stack",
-      tools: "Tools Used",
-    };
 
     if (!project) {
         return <div className="p-10 text-white">Project not found</div>;
     }
-    
-    const meta = project.meta ?? {};
 
     return (
     <main className="min-h-screen bg-black text-white p-8">
 
       {/* VIDEO */}
       <VideoPlayer src={project.fullVideo} thumbnail={project.thumbnail} />
-
+   
       {/* INFO */}
       <div className="max-w-2xl mx-auto space-y-4">
 
@@ -72,41 +67,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </span>
             ))}
         </div>
-
-        {/* TOOLS or TECH STACK */}
-        {(Object.entries(project.meta ?? {}) as [MetaKey, string[]][])
-          .map(([key, items]) => {
-        const label = metaLabels[key as MetaKey];
-
-        return (
-          <div key={key}>
-            <p className="text-xs uppercase tracking-widest text-gray-500 mb-4">
-              {label}
-            </p>
-
-            <div className="flex flex-wrap items-center gap-2 mb-4">
-              {items.map((tool) => (
-                <span
-                  key={tool}
-                  className="
-                    px-2.5 py-1
-                    text-xs tracking-wide
-                    rounded-md
-                    bg-white/5
-                    text-gray-400
-                    hover:bg-white/10
-                    cursor-pointer
-                    hover:text-white
-                    transition
-                  "
-                >
-                  {tool}
-                </span>
-              ))}
-            </div>
-          </div>
-        );
-      })}
+        
+        {/* Tools Used or Tech Stack */}
+        <ProjectMeta meta={project.meta} />
 
         {project.contributions && (
           <section className="mt-12">
