@@ -1,5 +1,3 @@
-"use client";
-
 import type { MetaKey } from "../data/types";
 
 const metaLabels: Record<MetaKey, string> = {
