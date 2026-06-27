@@ -1,6 +1,34 @@
+import { title } from "process";
 import type { Project } from "./types";
 export const work = [
-    {
+  {
+    slug: "portfolio-site",
+    title: "This Website",
+    type: "Software",
+    year: "2026",
+    thumbnail: "",
+    previewVideo: "/video/code-prv.mp4",
+    fullVideo: "",
+    roles: ["Designer", "Developer", "Site Owner"],
+    meta: {
+      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"]
+    },
+    authorship: "Created Entirely by Damian Seals",
+    description: "A custom-built portfolio created to showcase my work in filmmaking and software engineering in a single cohesive experience. Rather than using a template or a website builder, I designed and developed the site from scratch using modern web technologies, allowing complete control over presentation, performance, and functionality.",
+    contributions: "Designed the site's visual identity and user experience, developed the frontend using Next.js, TypeScript, and Tailwind CSS, implemented responsive layouts and reusable components, integrated video and image galleries, and deployed the application to production on a custom domain using Vercel.",
+    challengesOld: "The project required balancing visual presentation with performance, particularly when working with large media assets. I implemented responsive layouts, optimized video previews, configured custom domain routing and DNS records, and resolved deployment and production issues that differed from local development environments.",
+    challenges: [
+      {
+        title: "Supporting multiple project types in one system",
+        description: "Designing a single project template that could support both software and film projects without creating separate page systems.",
+        takeaway: "I initially explored more abstract data structures, but given the scope of the project, I implemented a practical solution using conditional rendering based on project type and optional metadata fields.\n\nThis allowed me to reuse the same page architecture while still supporting different content formats like video previews, tech stacks, and roles."
+      }
+    ],
+    learnings: "Building and maintaining the site provided experience across the entire application lifecycle, from architecture and frontend development to deployment, troubleshooting, and ongoing maintenance. The project strengthened my understanding of Next.js, TypeScript, Git workflows, DNS configuration, performance optimization, and production hosting environments.",
+    btsImages: [],
+    featured: true
+  },
+  {
     slug: "for-those-who-feel-like-giving-up",
     title: "for those who feel like giving up...",
     type: "youtube video",
@@ -84,26 +112,6 @@ export const work = [
       "/images/dear-david/dd-bts-2.jpg",
       "/images/dear-david/dd-bts-3.jpg",
     ],
-    featured: true
-  },
-  {
-    slug: "portfolio-site",
-    title: "This Website",
-    type: "Software",
-    year: "2026",
-    thumbnail: "",
-    previewVideo: "/video/code-prv.mp4",
-    fullVideo: "",
-    roles: ["Designer", "Developer", "Site Owner"],
-    meta: {
-      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"]
-    },
-    authorship: "Created Entirely by Damian Seals",
-    description: "A custom-built portfolio created to showcase my work in filmmaking and software engineering in a single cohesive experience. Rather than using a template or a website builder, I designed and developed the site from scratch using modern web technologies, allowing complete control over presentation, performance, and functionality.",
-    contributions: "Designed the site's visual identity and user experience, developed the frontend using Next.js, TypeScript, and Tailwind CSS, implemented responsive layouts and reusable components, integrated video and image galleries, and deployed the application to production on a custom domain using Vercel.",
-    challenges: "The project required balancing visual presentation with performance, particularly when working with large media assets. I implemented responsive layouts, optimized video previews, configured custom domain routing and DNS records, and resolved deployment and production issues that differed from local development environments.",
-    learnings: "Building and maintaining the site provided experience across the entire application lifecycle, from architecture and frontend development to deployment, troubleshooting, and ongoing maintenance. The project strengthened my understanding of Next.js, TypeScript, Git workflows, DNS configuration, performance optimization, and production hosting environments.",
-    btsImages: [],
     featured: true
   },
   {
