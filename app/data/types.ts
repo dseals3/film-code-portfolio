@@ -9,4 +9,10 @@ export type Project = {
   roles: string[];
 
   meta?: Partial<ProjectMeta>;
+
+  challenges?: {
+    title: string;
+    description: string;
+    takeaway?: string;
+  }[];
 };
