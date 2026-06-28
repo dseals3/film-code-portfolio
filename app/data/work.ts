@@ -19,9 +19,19 @@ export const work = [
     challengesOld: "The project required balancing visual presentation with performance, particularly when working with large media assets. I implemented responsive layouts, optimized video previews, configured custom domain routing and DNS records, and resolved deployment and production issues that differed from local development environments.",
     challenges: [
       {
-        title: "Supporting multiple project types in one system",
-        description: "Designing a single project template that could support both software and film projects without creating separate page systems.",
-        takeaway: "I initially explored more abstract data structures, but given the scope of the project, I implemented a practical solution using conditional rendering based on project type and optional metadata fields.\n\nThis allowed me to reuse the same page architecture while still supporting different content formats like video previews, tech stacks, and roles."
+        title: "1. Designing a flexible project system",
+        subtitle: "Supporting both film and software projects in a single reusable template.",
+        solution: "I initially explored more abstract data structures, but given the scope of the project, I implemented a practical solution using conditional rendering based on project type and optional metadata fields.\n\nThis allowed me to reuse the same page architecture while still supporting different content formats like video previews, tech stacks, and roles."
+      },
+      {
+        title: "2. Video Preview Performance and Autoplay Behavior",
+        subtitle: "Making video previews feel instant without hurting performance.",
+        solution: "Browser autoplay rules, preload behavior, and network caching created inconsistent loading behavior across local and production environments, especially with multiple embedded videos.\n\nI optimized this using muted autoplay, preload=\"metadata\", and lightweight preview encodes."
+      },
+      {
+        title: "3. Dynamic Routing + Content Architecture",
+        subtitle: "Creating scalable project pages using slugs.",
+        solution: "I implemented dynamic routes using Next.js App Router and structured project data so pages are generated from a single source of truth.\n\nThis made it easy to add new projects without touching page logic."
       }
     ],
     learnings: "Building and maintaining the site provided experience across the entire application lifecycle, from architecture and frontend development to deployment, troubleshooting, and ongoing maintenance. The project strengthened my understanding of Next.js, TypeScript, Git workflows, DNS configuration, performance optimization, and production hosting environments.",
