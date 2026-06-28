@@ -96,12 +96,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </p>
 
                 <p className="text-sm text-gray-400 leading-relaxed">
-                  {challenge.description}
+                  {challenge.subtitle}
                 </p>
 
-                {challenge.takeaway && (
+                {challenge.solution && (
                   <p className="text-xs text-gray-500">
-                    {challenge.takeaway}
+                    {challenge.solution}
                   </p>
                 )}
               </div>
