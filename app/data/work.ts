@@ -79,7 +79,6 @@ export const work = [
     meta: {
       tools: ["Sony A7iv", "Sony FX30", "Amaran 300c", "C-Stand", "Davinci Resolve"]
     },
-    tools: ["Sony A7iv", "Sony FX30", "Amaran 300c", "C-Stand", "Davinci Resolve"],
     btsImages: [
       "/images/dear-david/dd-bts-1.jpg",
       "/images/dear-david/dd-bts-2.jpg",
