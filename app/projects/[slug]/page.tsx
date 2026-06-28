@@ -90,19 +90,21 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             </h2>
 
             {project.challenges.map((challenge, i) => (
-              <div key={i} className="space-y-2">
-                <p className="text-white text-sm font-medium">
+              <div key={i} className="space-y-2 mb-10">
+                <h3 className="text-lg font-medium mb-3">
                   {challenge.title}
-                </p>
+                </h3>
 
-                <p className="text-sm text-gray-400 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed mb-4">
                   {challenge.subtitle}
                 </p>
 
                 {challenge.solution && (
-                  <p className="text-xs text-gray-500">
-                    {challenge.solution}
-                  </p>
+                  <div className="border-l border-white/10 pl-6">
+                    <p className=" text-gray-400 leading-relaxed">
+                      {challenge.solution}
+                    </p>
+                  </div>
                 )}
               </div>
             ))}
