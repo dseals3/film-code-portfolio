@@ -21,7 +21,7 @@ export const work = [
       {
         title: "1. Designing a flexible project system",
         subtitle: "Supporting both film and software projects in a single reusable template.",
-        solution: "I initially explored more abstract data structures, but given the scope of the project, I implemented a practical solution using conditional rendering based on project type and optional metadata fields.\n\nThis allowed me to reuse the same page architecture while still supporting different content formats like video previews, tech stacks, and roles."
+        solution: "This portfolio contains both film and software projects, each requiring different information and presentation styles. The challenge was supporting both project types while keeping a single reusable project page template and avoiding duplicating page logic .\n\nI solved this using conditional rendering and project-specific metadata, allowing the same page architecture to adapt to different content formats such as video previews, tech stacks, and project roles."
       },
       {
         title: "2. Video Preview Performance and Autoplay Behavior",
