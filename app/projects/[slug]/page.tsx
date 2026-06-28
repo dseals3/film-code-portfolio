@@ -83,14 +83,31 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </section>
         )}
 
-        {project.challenges && (
+        {project.challenges && project.challenges.length > 0 && (
           <section className="mt-12">
             <h2 className="text-xl font-semibold mb-4">
-              Challenges
+              Key Challenges
             </h2>
 
+            {project.challenges.map((challenge, i) => (
+              <div key={i} className="space-y-2">
+                <p className="text-white text-sm font-medium">
+                  {challenge.title}
+                </p>
+
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {challenge.description}
+                </p>
+
+                {challenge.takeaway && (
+                  <p className="text-xs text-gray-500">
+                    {challenge.takeaway}
+                  </p>
+                )}
+              </div>
+            ))}
             <p className="leading-relaxed text-gray-400">
-              {project.challenges}
+              {/* {project.challenges} */}
             </p>
           </section>
         )}
