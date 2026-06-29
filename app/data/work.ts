@@ -91,7 +91,7 @@ export const work = [
     title: "This Website",
     type: "Software",
     year: "2026",
-    thumbnail: "",
+    thumbnail: "/images/homepage-current.png",
     previewVideo: "/video/code-prv.mp4",
     fullVideo: "",
     roles: ["Designer", "Developer", "Site Owner"],
