@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type Props = {
   images: string[];
@@ -88,38 +89,38 @@ export default function BTSGallery({ images }: Props) {
             <button
             onClick={goPrev}
             className="
-              absolute left-4 top-1/2 -translate-y-1/2
+              absolute left-[-60px] top-1/2 -translate-y-1/2
               h-12 w-12
               rounded-full
               bg-black/60
               hover:bg-black/80
-              text-white
-              text-3xl
+              text-white text-3xl
+              border border-white/20
               flex items-center justify-center
               cursor-pointer
               transition
             "
             >
-            ‹
+              <ChevronLeft size={28} />
             </button>
 
             {/* RIGHT BUTTON */}
             <button
             onClick={goNext}
             className="
-              absolute right-4 top-1/2 -translate-y-1/2
+              absolute right-[-60px] top-1/2 -translate-y-1/2
               h-12 w-12
               rounded-full
               bg-black/60
               hover:bg-black/80
-              text-white
-              text-3xl
+              text-white text-3xl
+              border border-white/20
               flex items-center justify-center
               cursor-pointer
               transition
             "
             >
-            ›
+              <ChevronRight size={28} />
             </button>
           </div>
         </div>
