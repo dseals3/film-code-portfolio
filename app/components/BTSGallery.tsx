@@ -89,16 +89,16 @@ export default function BTSGallery({ images }: Props) {
             <button
             onClick={goPrev}
             className="
-              absolute left-[-60px] top-1/2 -translate-y-1/2
-              h-12 w-12
+              absolute left-[-96px] top-1/2 -translate-y-1/2
+              h-15 w-15
               rounded-full
-              bg-black/60
-              hover:bg-black/80
+              bg-zinc-900
               text-white text-3xl
               border border-white/20
               flex items-center justify-center
+              hover:bg-black/80 hover:scale-110 hover:border-white/25
               cursor-pointer
-              transition
+              transition duration-200 ease-out
             "
             >
               <ChevronLeft size={28} />
@@ -108,16 +108,16 @@ export default function BTSGallery({ images }: Props) {
             <button
             onClick={goNext}
             className="
-              absolute right-[-60px] top-1/2 -translate-y-1/2
-              h-12 w-12
+              absolute right-[-96px] top-1/2 -translate-y-1/2
+              h-15 w-15
               rounded-full
-              bg-black/60
-              hover:bg-black/80
+              bg-zinc-900
               text-white text-3xl
-              border border-white/20
+              border border-white/10
               flex items-center justify-center
+              hover:bg-black/80 hover:scale-108 hover:border-white/25
               cursor-pointer
-              transition
+              transition duration-200 ease-out
             "
             >
               <ChevronRight size={28} />
