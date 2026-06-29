@@ -24,8 +24,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     <main className="min-h-screen bg-black text-white p-8">
 
       {/* VIDEO */}
-      <VideoPlayer src={project.fullVideo} thumbnail={project.thumbnail} />
-   
+      {project.fullVideo && (
+        <VideoPlayer src={project.fullVideo} thumbnail={project.thumbnail} />
+      )}
+      
       {/* INFO */}
       <div className="max-w-2xl mx-auto space-y-4">
 
@@ -71,6 +73,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {/* Tools Used or Tech Stack */}
         <ProjectMeta meta={project.meta} />
 
+        {/* Contributions */}
         {project.contributions && (
           <section className="mt-12">
             <h2 className="text-xl font-semibold mb-4">
@@ -83,6 +86,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </section>
         )}
 
+        {/* Challenges */}
         {project.challenges && project.challenges.length > 0 && (
           <section className="mt-12">
             <h2 className="text-xl font-semibold mb-4">
@@ -114,6 +118,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </section>
         )}
 
+        {/* What I Learned */}
         {project.learnings && (
           <section className="mt-12">
             <h2 className="text-xl font-semibold mb-4">
@@ -125,8 +130,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             </p>
           </section>
         )}
-        {/* BEHIND THE SCENES PHOTOS */}
-        
+
+        {/* BEHIND THE SCENES PHOTOS */}    
         {project.btsImages && project.btsImages.length > 0 && (
           <section className="mt-16">
             <h2 className="text-xs uppercase tracking-widest text-gray-500 mb-6">
