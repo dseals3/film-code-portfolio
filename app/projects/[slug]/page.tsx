@@ -1,10 +1,11 @@
 import { work } from "../../data/work";
 
 
-import VideoPlayer from "../../components/VideoPlayer"
-import ProjectMeta from "../../components/ProjectMeta"
-import BTSGallery from "../../components/BTSGallery"
-import Footer from "../../components/Footer";
+import VideoPlayer from "@/app/components/VideoPlayer"
+import ImageViewer from "@/app/components/ImageViewer";
+import ProjectMeta from "@/app/components/ProjectMeta"
+import BTSGallery from "@/app/components/BTSGallery"
+import Footer from "@/app/components/Footer";
 
 export async function generateStaticParams() {
   return work.map((item) => ({
@@ -24,9 +25,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     <main className="min-h-screen bg-black text-white p-8">
 
       {/* VIDEO */}
-      {project.fullVideo && (
+      {project.fullVideo ? (
         <VideoPlayer src={project.fullVideo} thumbnail={project.thumbnail} />
-      )}
+      ) : project.thumbnail ? (
+        <ImageViewer src={project.thumbnail} alt={project.title} />
+      ) : null}
       
       {/* INFO */}
       <div className="max-w-2xl mx-auto space-y-4">
