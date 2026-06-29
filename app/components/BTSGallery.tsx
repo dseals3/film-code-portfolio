@@ -74,6 +74,10 @@ export default function BTSGallery({ images }: Props) {
             className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
             onClick={close}
         >
+          <div
+            className="relative"
+            onClick={(e) => e.stopPropagation()}
+          >
             {/* Image */}
             <img
             src={currentImage!}
@@ -83,7 +87,18 @@ export default function BTSGallery({ images }: Props) {
             {/* LEFT BUTTON */}
             <button
             onClick={goPrev}
-            className="absolute left-6 text-white text-3xl opacity-70 hover:opacity-100 transition"
+            className="
+              absolute left-4 top-1/2 -translate-y-1/2
+              h-12 w-12
+              rounded-full
+              bg-black/60
+              hover:bg-black/80
+              text-white
+              text-3xl
+              flex items-center justify-center
+              cursor-pointer
+              transition
+            "
             >
             ‹
             </button>
@@ -91,10 +106,22 @@ export default function BTSGallery({ images }: Props) {
             {/* RIGHT BUTTON */}
             <button
             onClick={goNext}
-            className="absolute right-6 text-white text-3xl opacity-70 hover:opacity-100 transition"
+            className="
+              absolute right-4 top-1/2 -translate-y-1/2
+              h-12 w-12
+              rounded-full
+              bg-black/60
+              hover:bg-black/80
+              text-white
+              text-3xl
+              flex items-center justify-center
+              cursor-pointer
+              transition
+            "
             >
             ›
             </button>
+          </div>
         </div>
         )}
     </>
