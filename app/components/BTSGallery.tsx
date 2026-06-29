@@ -94,11 +94,11 @@ export default function BTSGallery({ images }: Props) {
               rounded-full
               bg-zinc-900
               text-white text-3xl
-              border border-white/20
+              border border-white/10
               flex items-center justify-center
               hover:bg-black/80 hover:scale-110 hover:border-white/25
               cursor-pointer
-              transition duration-200 ease-out
+              transition-all duration-200 ease-out
             "
             >
               <ChevronLeft size={28} />
@@ -117,7 +117,7 @@ export default function BTSGallery({ images }: Props) {
               flex items-center justify-center
               hover:bg-black/80 hover:scale-108 hover:border-white/25
               cursor-pointer
-              transition duration-200 ease-out
+              transition-all duration-200 ease-out
             "
             >
               <ChevronRight size={28} />
