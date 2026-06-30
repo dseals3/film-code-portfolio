@@ -15,4 +15,10 @@ export type Project = {
     description: string;
     takeaway?: string;
   }[];
+
+  developmentHighlights?: {
+    title: string;
+    description: string;
+    code: string;
+  }[];
 };
