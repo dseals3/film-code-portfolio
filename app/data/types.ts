@@ -16,7 +16,7 @@ export type Project = {
     takeaway?: string;
   }[];
 
-  developmentHighlights?: {
+  devHighlights?: {
     title: string;
     description: string;
     code: string;
