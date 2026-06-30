@@ -119,6 +119,36 @@ export const work = [
         solution: "I implemented dynamic routes using Next.js App Router and structured project data so pages are generated from a single source of truth.\n\nThis made it easy to add new projects without touching page logic."
       }
     ],
+    devHighlights: [
+      {
+        title: "Unified Project Data",
+        description:
+          "Centralized project information into a shared data structure, making it easy to add new projects and maintain consistent layouts throughout the site.",
+        code: `{
+          slug: "website",
+          title: "Portfolio Website",
+          meta: {
+            tech: ["Next.js", "TypeScript", "Tailwind CSS"]
+          }
+        }`
+      },
+      {
+        title: "Flexible Project Templates",
+        description:
+          "Used conditional rendering and project-specific metadata to support both film and software projects within a single page architecture. Conditional rendering and project-specific metadata allow the same template to adapt to different content requirements without duplicating page logic.",
+        code: `{project.fullVideo ? (
+          <VideoPlayer />
+        ) : (
+          <ImageViewer />
+        )}`
+      },
+      {
+        title: "Reusable Components",
+        description:
+          "Extracted repeated UI patterns into reusable components, reducing duplication and improving maintainability. This made it easier to expand the site while maintaining a unified design system.",
+        code: `<ProjectMeta meta={project.meta} />`
+      }
+    ],
     learnings: "Building and maintaining the site provided experience across the entire application lifecycle, from architecture and frontend development to deployment, troubleshooting, and ongoing maintenance. The project strengthened my understanding of Next.js, TypeScript, Git workflows, DNS configuration, performance optimization, and production hosting environments.",
     btsImages: [],
     featured: true
