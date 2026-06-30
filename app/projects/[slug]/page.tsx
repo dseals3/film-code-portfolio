@@ -92,7 +92,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {/* Challenges */}
         {project.challenges && project.challenges.length > 0 && (
           <section className="mt-12">
-            <h2 className="text-xl font-semibold mb-4">
+            <h2 className="text-xl font-semibold mb-6">
               Key Challenges
             </h2>
 
@@ -115,16 +115,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 )}
               </div>
             ))}
-            <p className="leading-relaxed text-gray-400">
-              {/* {project.challenges} */}
-            </p>
           </section>
         )}
 
         {/* Development Highlights */}
         {project.devHighlights && project.devHighlights.length > 0 && (
           <section className="mt-12">
-            <h2 className="text-xl font-semibold mb-4">
+            <h2 className="text-xl font-semibold mb-6">
               Development Highlights
             </h2>
 
@@ -140,9 +137,17 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
                 {devHighlight.code && (
                   <div className="border-l border-white/10 pl-6">
-                    <p className=" text-gray-400 leading-relaxed">
-                      {devHighlight.code}
-                    </p>
+                    <pre
+                      className="
+                        overflow-x-auto
+                        rounded-lg
+                        bg-zinc-900
+                        border border-white/10
+                        p-4
+                        text-sm
+                      ">
+                        <code>{devHighlight.code}</code>
+                    </pre>
                   </div>
                 )}
               </div>
