@@ -121,6 +121,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </section>
         )}
 
+        {/* Development Highlights */}
+        <section className="mt-12">
+          <h2 className="text-xl font-semibold mb-4">
+              Development Highlights
+            </h2>
+        </section>
+
         {/* What I Learned */}
         {project.learnings && (
           <section className="mt-12">
