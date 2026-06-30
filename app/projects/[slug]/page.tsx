@@ -122,11 +122,34 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         )}
 
         {/* Development Highlights */}
-        <section className="mt-12">
-          <h2 className="text-xl font-semibold mb-4">
+        {project.devHighlights && project.devHighlights.length > 0 && (
+          <section className="mt-12">
+            <h2 className="text-xl font-semibold mb-4">
               Development Highlights
             </h2>
-        </section>
+
+            {project.devHighlights.map((devHighlight, i) => (
+              <div key={i} className="space-y-2 mb-10">
+                <h3 className="text-lg font-medium mb-3">
+                  {devHighlight.title}
+                </h3>
+
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  {devHighlight.description}
+                </p>
+
+                {devHighlight.code && (
+                  <div className="border-l border-white/10 pl-6">
+                    <p className=" text-gray-400 leading-relaxed">
+                      {devHighlight.code}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+
+          </section>
+        )}
 
         {/* What I Learned */}
         {project.learnings && (
