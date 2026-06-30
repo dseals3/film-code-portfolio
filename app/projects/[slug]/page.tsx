@@ -125,17 +125,17 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               Development Highlights
             </h2>
 
-            {project.devHighlights.map((devHighlight, i) => (
-              <div key={i} className="space-y-2 mb-10">
+            {project.devHighlights.map((highlight) => (
+              <div key={highlight.title} className="space-y-2 mb-10">
                 <h3 className="text-lg font-medium mb-3">
-                  {devHighlight.title}
+                  {highlight.title}
                 </h3>
 
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  {devHighlight.description}
+                <p className="text-gray-400 leading-relaxed mb-4">
+                  {highlight.description}
                 </p>
 
-                {devHighlight.code && (
+                {highlight.code && (
                   <div className="border-l border-white/10 pl-6">
                     <pre
                       className="
@@ -146,7 +146,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         p-4
                         text-sm
                       ">
-                        <code>{devHighlight.code}</code>
+                        <code>{highlight.code}</code>
                     </pre>
                   </div>
                 )}
