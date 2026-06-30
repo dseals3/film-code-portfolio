@@ -90,10 +90,10 @@ export default function BTSGallery({ images }: Props) {
             onClick={goPrev}
             className="
               absolute left-[-96px] top-1/2 -translate-y-1/2
-              h-15 w-15
+              h-14 w-14
               rounded-full
               bg-zinc-900
-              text-white text-3xl
+              text-white
               border border-white/10
               flex items-center justify-center
               hover:bg-black/80 hover:scale-110 hover:border-white/25
@@ -109,10 +109,10 @@ export default function BTSGallery({ images }: Props) {
             onClick={goNext}
             className="
               absolute right-[-96px] top-1/2 -translate-y-1/2
-              h-15 w-15
+              h-14 w-14
               rounded-full
               bg-zinc-900
-              text-white text-3xl
+              text-white
               border border-white/10
               flex items-center justify-center
               hover:bg-black/80 hover:scale-108 hover:border-white/25
