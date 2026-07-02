@@ -34,12 +34,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       {/* INFO */}
       <div className="max-w-2xl mx-auto space-y-4">
 
-        <div className="flex justify-between text-sm text-gray-400 uppercase">
+        <div className="flex justify-between text-sm text-gray-400 uppercase mb-4">
           <span>{project.type}</span>
           <span>{project.year}</span>
         </div>
 
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-[2.1rem] font-bold mb-6">
           {project.title}
         </h1>
 
@@ -79,7 +79,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {/* Contributions */}
         {project.contributions && (
           <section className="mt-16">
-            <h2 className="text-xl font-semibold mb-6 pb-2 border-b border-white/15">
+            <h2 className="text-2xl font-semibold mb-6 pb-2 border-b border-white/15">
               My Contributions
             </h2>
 
@@ -92,13 +92,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {/* Challenges */}
         {project.challenges && project.challenges.length > 0 && (
           <section className="mt-16">
-            <h2 className="text-xl font-semibold mb-6 pb-2 border-b border-white/15">
+            <h2 className="text-2xl font-semibold mb-6 pb-2 border-b border-white/15">
               Key Challenges
             </h2>
 
             {project.challenges.map((challenge, i) => (
               <div key={i} className="space-y-2 mb-10">
-                <h3 className="text-lg font-medium mb-3">
+                <h3 className="text-lg font-semibold text-gray-100 mb-3">
                   {challenge.title}
                 </h3>
 
@@ -121,17 +121,25 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {/* Development Highlights */}
         {project.devHighlights && project.devHighlights.length > 0 && (
           <section className="mt-16">
-            <h2 className="text-xl font-semibold mb-6 pb-2 border-b border-white/15">
+            <h2 className="text-2xl font-semibold mb-6 pb-2 border-b border-white/15">
               Development Highlights
             </h2>
 
             {project.devHighlights.map((highlight) => (
-              <div key={highlight.title} className="space-y-2 mb-10">
-              <h3 className="text-lg font-medium text-white mb-3">
+              <div key={highlight.title} 
+                className="
+                  mb-6
+                  rounded-xl
+                  border border-white/6
+                  p-6
+                  bg-white/[0.02]
+                "
+              >
+              <h3 className="text-lg font-semibold text-gray-100 mb-3">
                 {highlight.title}
               </h3>
 
-                <p className="text-gray-400 leading-relaxed mb-4">
+                <p className="text-gray-400 text-md leading-relaxed mb-4">
                   {highlight.description}
                 </p>
 
@@ -142,7 +150,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         overflow-x-auto
                         rounded-lg
                         bg-zinc-900
-                        border border-white/10
+                        border border-white/15
                         p-4
                         text-sm
                       ">
@@ -159,7 +167,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {/* What I Learned */}
         {project.learnings && (
           <section className="mt-16">
-            <h2 className="text-xl font-semibold mb-6 pb-2 border-b border-white/15">
+            <h2 className="text-2xl font-semibold mb-6 pb-2 border-b border-white/15">
               What I learned
             </h2>
 
