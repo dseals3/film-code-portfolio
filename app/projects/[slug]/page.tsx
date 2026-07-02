@@ -3,11 +3,9 @@ import { work } from "../../data/work";
 import VideoPlayer from "@/app/components/VideoPlayer"
 import ImageViewer from "@/app/components/ImageViewer";
 import ProjectMeta from "@/app/components/ProjectMeta"
+import CodeBlock from "@/app/components/CodeBlock";
 import BTSGallery from "@/app/components/BTSGallery"
 import Footer from "@/app/components/Footer";
-
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export async function generateStaticParams() {
   return work.map((item) => ({
@@ -147,20 +145,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
                 {highlight.code && (
                   <div className="border-l border-white/12 pl-6">
-                    <SyntaxHighlighter
-                      language="tsx"
-                      style={oneDark}
-                      wrapLines={false}
-                      customStyle={{
-                        fontSize: "0.8rem",
-                        borderRadius: "0.75rem",
-                        margin: 0,
-                        border: "1px solid rgba(255,255,255,0.1)",
-                        padding: "1rem",
-                      }}
-                    >
-                      {highlight.code}
-                    </SyntaxHighlighter>
+                    <CodeBlock code={highlight.code} />
                   </div>
                 )}
               </div>
