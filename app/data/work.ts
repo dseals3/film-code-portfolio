@@ -104,17 +104,17 @@ export const work = [
     challengesOld: "The project required balancing visual presentation with performance, particularly when working with large media assets. I implemented responsive layouts, optimized video previews, configured custom domain routing and DNS records, and resolved deployment and production issues that differed from local development environments.",
     challenges: [
       {
-        title: "1. Designing a flexible project system",
+        title: "Designing a flexible project system",
         subtitle: "Supporting both film and software projects in a single reusable template.",
         solution: "This portfolio contains both film and software projects, each requiring different information and presentation styles. The challenge was supporting both project types while keeping a single reusable project page template and avoiding duplicating page logic .\n\nI solved this using conditional rendering and project-specific metadata, allowing the same page architecture to adapt to different content formats such as video previews, tech stacks, and project roles."
       },
       {
-        title: "2. Video Preview Performance and Autoplay Behavior",
+        title: "Video Preview Performance and Autoplay Behavior",
         subtitle: "Making video previews feel instant without hurting performance.",
         solution: "Browser autoplay rules, preload behavior, and network caching created inconsistent loading behavior across local and production environments, especially with multiple embedded videos.\n\nI optimized this using muted autoplay, preload=\"metadata\", and lightweight preview encodes."
       },
       {
-        title: "3. Dynamic Routing + Content Architecture",
+        title: "Dynamic Routing + Content Architecture",
         subtitle: "Creating scalable project pages using slugs.",
         solution: "I implemented dynamic routes using Next.js App Router and structured project data so pages are generated from a single source of truth.\n\nThis made it easy to add new projects without touching page logic."
       }
