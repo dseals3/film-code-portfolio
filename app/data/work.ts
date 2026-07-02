@@ -125,22 +125,22 @@ export const work = [
         description:
           "Centralized project information into a shared data structure, making it easy to add new projects and maintain consistent layouts throughout the site.",
         code: `{
-          slug: "website",
-          title: "Portfolio Website",
-          meta: {
-            tech: ["Next.js", "TypeScript", "Tailwind CSS"]
-          }
-        }`
+    slug: "website",
+    title: "Portfolio Website",
+    meta: {
+        tech: ["Next.js", "TypeScript", "Tailwind CSS"]
+    }
+}`
       },
       {
         title: "Flexible Project Templates",
         description:
           "Used conditional rendering and project-specific metadata to support both film and software projects within a single page architecture. Conditional rendering and project-specific metadata allow the same template to adapt to different content requirements without duplicating page logic.",
         code: `{project.fullVideo ? (
-          <VideoPlayer />
-        ) : (
-          <ImageViewer />
-        )}`
+    <VideoPlayer />
+) : (
+    <ImageViewer />
+)}`
       },
       {
         title: "Reusable Components",
