@@ -78,8 +78,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         {/* Contributions */}
         {project.contributions && (
-          <section className="mt-12">
-            <h2 className="text-xl font-semibold mb-4">
+          <section className="mt-16">
+            <h2 className="text-xl font-semibold mb-6 pb-2 border-b border-white/15">
               My Contributions
             </h2>
 
@@ -91,8 +91,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         {/* Challenges */}
         {project.challenges && project.challenges.length > 0 && (
-          <section className="mt-12">
-            <h2 className="text-xl font-semibold mb-6">
+          <section className="mt-16">
+            <h2 className="text-xl font-semibold mb-6 pb-2 border-b border-white/15">
               Key Challenges
             </h2>
 
@@ -107,7 +107,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </p>
 
                 {challenge.solution && (
-                  <div className="border-l border-white/10 pl-6">
+                  <div className="border-l border-white/12 pl-6">
                     <p className=" text-gray-400 leading-relaxed">
                       {challenge.solution}
                     </p>
@@ -120,23 +120,23 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         {/* Development Highlights */}
         {project.devHighlights && project.devHighlights.length > 0 && (
-          <section className="mt-12">
-            <h2 className="text-xl font-semibold mb-6">
+          <section className="mt-16">
+            <h2 className="text-xl font-semibold mb-6 pb-2 border-b border-white/15">
               Development Highlights
             </h2>
 
             {project.devHighlights.map((highlight) => (
               <div key={highlight.title} className="space-y-2 mb-10">
-                <h3 className="text-lg font-medium mb-3">
-                  {highlight.title}
-                </h3>
+              <h3 className="text-lg font-medium text-white mb-3">
+                {highlight.title}
+              </h3>
 
                 <p className="text-gray-400 leading-relaxed mb-4">
                   {highlight.description}
                 </p>
 
                 {highlight.code && (
-                  <div className="border-l border-white/10 pl-6">
+                  <div className="border-l border-white/12 pl-6">
                     <pre
                       className="
                         overflow-x-auto
@@ -158,8 +158,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         {/* What I Learned */}
         {project.learnings && (
-          <section className="mt-12">
-            <h2 className="text-xl font-semibold mb-4">
+          <section className="mt-16">
+            <h2 className="text-xl font-semibold mb-6 pb-2 border-b border-white/15">
               What I learned
             </h2>
 
