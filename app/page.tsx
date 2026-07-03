@@ -21,7 +21,10 @@ export default function Home() {
           <source src="/video/code-prv.mp4" type="video/mp4" />
         </video>
 
+        {/* Dim the video a bit */}
+        <div className="absolute inset-0 bg-black/65" />
         
+        {/* Content */}
         <div className="relative z-10">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
             Damian Seals
