@@ -3,9 +3,11 @@ import { work } from "../../data/work";
 import VideoPlayer from "@/app/components/VideoPlayer"
 import ImageViewer from "@/app/components/ImageViewer";
 import ProjectMeta from "@/app/components/ProjectMeta"
+import SectionHeading from "@/app/components/SectionHeading";
 import CodeBlock from "@/app/components/CodeBlock";
 import BTSGallery from "@/app/components/BTSGallery"
 import Footer from "@/app/components/Footer";
+import { Section } from "lucide-react";
 
 export async function generateStaticParams() {
   return work.map((item) => ({
@@ -79,9 +81,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {/* Contributions */}
         {project.contributions && (
           <section className="mt-16">
-            <h2 className="text-2xl font-semibold mb-6 pb-2 border-b border-white/15">
-              My Contributions
-            </h2>
+            <SectionHeading>My Contributions</SectionHeading>
 
             <p className="leading-relaxed text-gray-400">
               {project.contributions}
@@ -121,9 +121,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {/* Development Highlights */}
         {project.devHighlights && project.devHighlights.length > 0 && (
           <section className="mt-16">
-            <h2 className="text-2xl font-semibold mb-6 pb-2 border-b border-white/15">
-              Development Highlights
-            </h2>
+            <SectionHeading>Development Highlights</SectionHeading>
 
             {project.devHighlights.map((highlight) => (
               <div key={highlight.title} 
@@ -157,9 +155,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {/* What I Learned */}
         {project.learnings && (
           <section className="mt-16">
-            <h2 className="text-2xl font-semibold mb-6 pb-2 border-b border-white/15">
-              What I learned
-            </h2>
+            <SectionHeading>What I learned</SectionHeading>
 
             <p className="leading-relaxed text-gray-400">
               {project.learnings}
@@ -170,9 +166,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {/* BEHIND THE SCENES PHOTOS */}    
         {project.btsImages && project.btsImages.length > 0 && (
           <section className="mt-16">
-            <h2 className="text-xs uppercase tracking-widest text-gray-500 mb-6">
-              Behind the Scenes
-            </h2>
+            <SectionHeading>Behind the Scenes</SectionHeading>
 
             {/* GALLERY */}
             <BTSGallery images={project.btsImages} />
