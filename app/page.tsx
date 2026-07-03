@@ -1,4 +1,5 @@
 import VideoCard from "./components/VideoCard";
+import { ScrollToContactBtn } from "./components/ScrolltoContactBtn";
 import Footer from "./components/Footer";
 import { work } from "./data/work";
 import Link from "next/link";
@@ -26,12 +27,17 @@ export default function Home() {
               View Work
             </a>
 
-            <a
-              href="#contact"
+            <ScrollToContactBtn />
+            {/* <button
+              onClick={() => {
+                document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
               className="px-6 py-3 border border-white rounded-full transition ease-in-out hover:scale-102 hover:bg-white/10 hover:backdrop-blur-sm"
-            >
+              >
               Contact
-            </a>
+            </button> */}
           </div>
         </div>
       </section>
