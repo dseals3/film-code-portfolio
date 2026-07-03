@@ -1,6 +1,6 @@
 "use client";
 
-export function ScrollToContactBtn() {
+export function ScrollToWorkBtn() {
   return (
     <button
       onClick={() => {
@@ -8,7 +8,7 @@ export function ScrollToContactBtn() {
           behavior: "smooth",
         });
       }}
-      className="px-6 py-3 bg-white text-black rounded-full transition ease-in-out hover:scale-105 hover:bg-zinc-200"
+      className="px-6 py-3 bg-white text-black rounded-full transition ease-in-out cursor-pointer hover:scale-105 hover:bg-zinc-200"
     >
       View Work
     </button>
