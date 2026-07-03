@@ -8,7 +8,7 @@ export function ScrollToContactBtn() {
           behavior: "smooth",
         });
       }}
-      className="px-6 py-3 border border-white rounded-full transition ease-in-out hover:scale-102 hover:bg-white/10 hover:backdrop-blur-sm"
+      className="px-6 py-3 border border-white rounded-full transition ease-in-out cursor-pointer hover:scale-102 hover:bg-white/10 hover:backdrop-blur-sm"
     >
       Contact
     </button>
