@@ -22,8 +22,21 @@ export default function Home() {
         </video>
 
         {/* Dim the video a bit */}
-        <div className="absolute inset-0 bg-black/65" />
+        <div className="absolute inset-0 bg-black/40" />
         
+        {/* Bottom Edge Fade */}
+        <div
+          className="
+            absolute
+            bottom-0
+            left-0
+            right-0
+            h-64
+            bg-gradient-to-b
+            from-transparent
+            to-black
+          "
+        />
         {/* Content */}
         <div className="relative z-10">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
