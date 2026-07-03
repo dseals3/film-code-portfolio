@@ -9,8 +9,20 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white">
 
       {/* HERO */}
-      <section className="h-screen flex items-center justify-center text-center px-6">
-        <div>
+      <section className="relative h-screen flex items-center justify-center text-center px-6 overflow-hidden">
+        {/* VIDEO */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/video/code-prv.mp4" type="video/mp4" />
+        </video>
+
+        
+        <div className="relative z-10">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
             Damian Seals
           </h1>
