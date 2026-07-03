@@ -1,5 +1,6 @@
 import VideoCard from "./components/VideoCard";
 import { ScrollToContactBtn } from "./components/ScrolltoContactBtn";
+import { ScrollToWorkBtn } from "./components/ScrolltoWorkBtn";
 import Footer from "./components/Footer";
 import { work } from "./data/work";
 import Link from "next/link";
@@ -48,13 +49,7 @@ export default function Home() {
           </p>
 
           <div className="mt-10 flex gap-4 justify-center">
-            <a
-              href="#selected-work"
-              className="px-6 py-3 bg-white text-black rounded-full transition ease-in-out hover:scale-105 hover:bg-zinc-200"
-            >
-              View Work
-            </a>
-
+            <ScrollToWorkBtn />
             <ScrollToContactBtn />
           </div>
         </div>
