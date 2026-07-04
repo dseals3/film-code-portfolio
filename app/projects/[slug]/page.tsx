@@ -27,41 +27,45 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
     return (
     <main className="min-h-screen bg-black text-white p-8">
+      <div className="relative max-w-5xl mx-auto overflow-visible">
+        <Link
+          href="/"
+          className="
+            absolute
+            top-4 left-0
+            
+            h-10 w-10
+            rounded-full
+            bg-zinc-900
+            border border-white/10
 
-<div className="relative max-w-5xl mx-auto">
-  <Link
-    href="/"
-    className="
-      absolute
-      left-[-64px]
-      top-4
-      h-10 w-10
+            flex items-center justify-center
 
-      rounded-full
-      border border-white/10
-      bg-zinc-900
+            text-gray-400
+            hover:text-white
+            hover:border-white/20
+            hover:bg-zinc-800
 
-      flex items-center justify-center
+            transition
+            z-20
 
-      text-gray-400
-      hover:text-white
-      hover:border-white/20
-      hover:bg-zinc-800
+            -translate-x-[-12px]
+            sm:-translate-x-[-12px]
+            md:-translate-x-[-12px]
+            lg:-translate-x-[64px]
+          "
+        >
+          <ArrowLeft size={18} />
+        </Link>
 
-      transition
-    "
-  >
-    <ArrowLeft size={18} />
-  </Link>
-
-    {/* VIDEO */}
-      {project.fullVideo ? (
-        <VideoPlayer src={project.fullVideo} thumbnail={project.thumbnail} />
-      ) : project.thumbnail ? (
-        <ImageViewer src={project.thumbnail} alt={project.title} />
-      ) : null}
-</div>
-      
+          {/* VIDEO */}
+            {project.fullVideo ? (
+              <VideoPlayer src={project.fullVideo} thumbnail={project.thumbnail} />
+            ) : project.thumbnail ? (
+              <ImageViewer src={project.thumbnail} alt={project.title} />
+            ) : null}
+      </div>
+            
 
       {/* INFO */}
       <div className="max-w-2xl mx-auto space-y-4">
