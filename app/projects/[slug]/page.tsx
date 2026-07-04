@@ -28,13 +28,14 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     return (
     <main className="min-h-screen bg-black text-white p-8">
 
-<div className="max-w-6xl mx-auto flex items-start gap-4">
+<div className="relative max-w-5xl mx-auto">
   <Link
     href="/"
     className="
-    mt-3
+      absolute
+      left-[-64px]
+      top-4
       h-10 w-10
-      shrink-0
 
       rounded-full
       border border-white/10
@@ -53,14 +54,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     <ArrowLeft size={18} />
   </Link>
 
-  <div className="flex-1">
     {/* VIDEO */}
       {project.fullVideo ? (
         <VideoPlayer src={project.fullVideo} thumbnail={project.thumbnail} />
       ) : project.thumbnail ? (
         <ImageViewer src={project.thumbnail} alt={project.title} />
       ) : null}
-  </div>
 </div>
       
 
