@@ -28,26 +28,41 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     return (
     <main className="min-h-screen bg-black text-white p-8">
 
-       <div className="max-w-5xl mx-auto pt-8 mb-4">
-    <Link
-      href="/"
-      className="
-        inline-flex items-center gap-2
-        text-gray-400
-        hover:text-white
-        transition
-      "
-    >
-      <ArrowLeft size={16} />
-      Back
-    </Link>
-  </div>
-      {/* VIDEO */}
+<div className="max-w-6xl mx-auto flex items-start gap-4">
+  <Link
+    href="/"
+    className="
+    mt-3
+      h-10 w-10
+      shrink-0
+
+      rounded-full
+      border border-white/10
+      bg-zinc-900
+
+      flex items-center justify-center
+
+      text-gray-400
+      hover:text-white
+      hover:border-white/20
+      hover:bg-zinc-800
+
+      transition
+    "
+  >
+    <ArrowLeft size={18} />
+  </Link>
+
+  <div className="flex-1">
+    {/* VIDEO */}
       {project.fullVideo ? (
         <VideoPlayer src={project.fullVideo} thumbnail={project.thumbnail} />
       ) : project.thumbnail ? (
         <ImageViewer src={project.thumbnail} alt={project.title} />
       ) : null}
+  </div>
+</div>
+      
 
       {/* INFO */}
       <div className="max-w-2xl mx-auto space-y-4">
