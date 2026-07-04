@@ -50,9 +50,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             z-20
 
             -translate-x-[-12px]
-            sm:-translate-x-[-12px]
-            md:-translate-x-[-12px]
-            lg:-translate-x-[64px]
+            lg2:translate-x-[-64px]
           "
         >
           <ArrowLeft size={18} />
