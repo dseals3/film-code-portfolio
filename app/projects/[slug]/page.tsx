@@ -7,6 +7,8 @@ import SectionHeading from "@/app/components/SectionHeading";
 import CodeBlock from "@/app/components/CodeBlock";
 import BTSGallery from "@/app/components/BTSGallery"
 import Footer from "@/app/components/Footer";
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
 import { Section } from "lucide-react";
 
 export async function generateStaticParams() {
@@ -26,13 +28,27 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     return (
     <main className="min-h-screen bg-black text-white p-8">
 
+       <div className="max-w-5xl mx-auto pt-8 mb-4">
+    <Link
+      href="/"
+      className="
+        inline-flex items-center gap-2
+        text-gray-400
+        hover:text-white
+        transition
+      "
+    >
+      <ArrowLeft size={16} />
+      Back
+    </Link>
+  </div>
       {/* VIDEO */}
       {project.fullVideo ? (
         <VideoPlayer src={project.fullVideo} thumbnail={project.thumbnail} />
       ) : project.thumbnail ? (
         <ImageViewer src={project.thumbnail} alt={project.title} />
       ) : null}
-      
+
       {/* INFO */}
       <div className="max-w-2xl mx-auto space-y-4">
 
