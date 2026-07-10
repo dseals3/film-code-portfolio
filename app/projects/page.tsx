@@ -12,7 +12,9 @@ export default function WorksPage() {
         <p className="text-gray-400 mb-12">
           A complete archive of narrative, commercial, and development projects.
         </p>
-        <WorkGrid />
+        <WorkGrid
+            projects={work.filter((item) => item.featured)}
+        />
       </div>
     </main>
   );
