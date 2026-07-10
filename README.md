@@ -1,6 +1,6 @@
 # Damian Seals Portfolio
 
-A custom-built portfolio created to showcase my filmmaking work and camera experience that also demonstrates my ability to design and develop a modern website from the ground up. The site serves as both a creative portfolio and a technical project, combining a curated presentation of my film work with a responsive, media-focused user experience designed and implemented from scratch.
+A custom-built portfolio created to showcase my filmmaking work that also demonstrates my ability to design and develop a modern website from the ground up. The site serves as both a creative portfolio and a technical project, combining a curated presentation of my film work with a responsive, media-focused user experience designed and implemented from scratch.
 
 Rather than relying on a template or site builder, every aspect of the project was built by hand using Next.js, TypeScript, and Tailwind CSS.
 
