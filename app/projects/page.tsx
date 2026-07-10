@@ -1,4 +1,5 @@
 import { work } from "../data/work";
+import WorkGrid from "../components/WorkGrid"
 
 export default function WorksPage() {
   return (
@@ -11,7 +12,7 @@ export default function WorksPage() {
         <p className="text-gray-400 mb-12">
           A complete archive of narrative, commercial, and development projects.
         </p>
-
+        <WorkGrid />
       </div>
     </main>
   );
