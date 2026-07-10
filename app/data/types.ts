@@ -22,3 +22,13 @@ export type Project = {
     code: string;
   }[];
 };
+
+export type WorkItem = {
+    slug: string;
+    title: string;
+    type: string;
+    year: string;
+    description: string;
+    previewVideo: string;
+    fullVideo: string;
+};
