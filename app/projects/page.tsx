@@ -13,7 +13,10 @@ export default function WorksPage() {
           A complete archive of narrative, commercial, and development projects.
         </p>
         <WorkGrid
-            projects={work.filter((item) => item.featured)}
+            projects={work}
+            columns={3}
+            showDescription
+            descriptionLines={2}
         />
       </div>
     </main>
