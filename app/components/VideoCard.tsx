@@ -3,7 +3,17 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import type { WorkItem } from "../data/types";
 
-export default function VideoCard({ item }: { item: WorkItem }) {
+type VideoCardProps = {
+  item: WorkItem;
+  showDescription?: boolean;
+  descriptionLines?: number;
+}
+
+export default function VideoCard({
+    item,
+    showDescription = true,
+    descriptionLines = 3,
+}: VideoCardProps) {
     const isVertical = item.type === "vertical";
     const videoRef = useRef<HTMLVideoElement>(null);
     useEffect(() => {
@@ -28,6 +38,10 @@ export default function VideoCard({ item }: { item: WorkItem }) {
 
         return () => observer.disconnect();
         }, []);
+        const lineClampClass = {
+            2: "line-clamp-2",
+            3: "line-clamp-3"
+        };
     return (
     
     <Link href={`/projects/${item.slug}`}
@@ -66,10 +80,11 @@ export default function VideoCard({ item }: { item: WorkItem }) {
                     <h3 className="text-lg font-semibold text-white">
                         {item.title}
                     </h3>
-
-                    <p className="text-sm text-gray-300 line-clamp-3">
-                        {item.description}
-                    </p>
+                    {showDescription && (
+                        <p className={`text-sm text-gray-300 ${lineClampClass[descriptionLines as 2 | 3]}`}>
+                            {item.description}
+                        </p>
+                    )}
                 </div>
             )}
         </div>
@@ -85,10 +100,11 @@ export default function VideoCard({ item }: { item: WorkItem }) {
                 <h3 className="text-xl font-semibold text-white">
                     {item.title}
                 </h3>
-
-                <p className="text-sm text-gray-400 line-clamp-3">
-                    {item.description}
-                </p>
+                {showDescription && (
+                    <p className={`text-sm text-gray-400 ${lineClampClass[descriptionLines as 2 | 3]}`}>
+                        {item.description}
+                    </p>
+                )}
             </div>
         )}
     </Link>
