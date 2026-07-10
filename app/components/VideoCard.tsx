@@ -1,16 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-
-type WorkItem = {
-    slug: string;
-    title: string;
-    type: string;
-    year: string;
-    description: string;
-    previewVideo: string;
-    fullVideo: string;
-};
+import type { WorkItem } from "../data/types";
 
 export default function VideoCard({ item }: { item: WorkItem }) {
     const isVertical = item.type === "vertical";
