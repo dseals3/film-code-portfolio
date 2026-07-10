@@ -1,15 +1,28 @@
 import VideoCard from "./VideoCard";
-import { work } from "@/app/data/work";
+import type { WorkItem } from "@/app/data/types";
 
-export default function WorkGrid() {
+type WorkGridProps = {
+    projects: WorkItem[];
+    columns?: 2 | 3 | 4;
+    showDescription?: boolean;
+    descriptionLines?: number;
+}
+
+export default function WorkGrid({projects, columns = 2, showDescription, descriptionLines = 3}: WorkGridProps) {
+    const gridCols = {
+        2: "md:grid-cols-2",
+        3: "md:grid-cols-3",
+        4: "md:grid-cols-4",
+    };
     return (
         <section id="selected-work" className="py-24 px-6 max-w-5xl mx-auto">
             <h2 className="text-2xl font-semibold mb-8">Selected Work</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 max-w-6xl mx-auto gap-6 ">
-                {work
-                .filter((item) => item.featured)
-                .map((item) => (
+            <div className={`
+                grid grid-cols-1
+                ${gridCols[columns]}
+                max-w-6xl mx-auto gap-6`}>
+                {projects.map((item) => (
                     <VideoCard key={item.slug} item={item} />
                 ))}
             </div>
