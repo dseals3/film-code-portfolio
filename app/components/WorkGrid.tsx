@@ -8,7 +8,7 @@ type WorkGridProps = {
     descriptionLines?: number;
 }
 
-export default function WorkGrid({projects, columns = 2, showDescription, descriptionLines = 3}: WorkGridProps) {
+export default function WorkGrid({projects, columns = 2, showDescription, descriptionLines}: WorkGridProps) {
     const gridCols = {
         2: "md:grid-cols-2",
         3: "md:grid-cols-3",
@@ -23,7 +23,12 @@ export default function WorkGrid({projects, columns = 2, showDescription, descri
                 ${gridCols[columns]}
                 max-w-6xl mx-auto gap-6`}>
                 {projects.map((item) => (
-                    <VideoCard key={item.slug} item={item} />
+                    <VideoCard
+                        key={item.slug}
+                        item={item}
+                        showDescription={showDescription}
+                        descriptionLines={descriptionLines}
+                    />
                 ))}
             </div>
             <p className="mt-12 text-center text-gray-500 text-sm">
