@@ -15,25 +15,18 @@ export default function WorkGrid({projects, columns = 2, showDescription, descri
         4: "md:grid-cols-4",
     };
     return (
-        <section id="selected-work" className="py-24 px-6 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-semibold mb-8">Selected Work</h2>
-
-            <div className={`
-                grid grid-cols-1
-                ${gridCols[columns]}
-                max-w-6xl mx-auto gap-6`}>
-                {projects.map((item) => (
-                    <VideoCard
-                        key={item.slug}
-                        item={item}
-                        showDescription={showDescription}
-                        descriptionLines={descriptionLines}
-                    />
-                ))}
-            </div>
-            <p className="mt-12 text-center text-gray-500 text-sm">
-                Selected work from recent film and digital projects.
-            </p>
-        </section>
+        <div className={`
+            grid grid-cols-1
+            ${gridCols[columns]}
+            max-w-6xl mx-auto gap-6`}>
+            {projects.map((item) => (
+                <VideoCard
+                    key={item.slug}
+                    item={item}
+                    showDescription={showDescription}
+                    descriptionLines={descriptionLines}
+                />
+            ))}
+        </div>
     );
 }
