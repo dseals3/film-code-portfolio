@@ -1,6 +1,31 @@
 import FilterCheckbox from "./FilterCheckbox";
 
 export default function FilterSidebar() {
+    const types = [
+        "Narrative",
+        "Commercial",
+        "Music Video",
+        "Youtube",
+        "Vertical",
+        "Software",
+    ];
+    const roles = [
+        "Director",
+        "Director of Photography",
+        "1st Assistant Camera",
+        "Gaffer",
+        "Grip",
+        "Editor",
+        "Colorist",
+        "Production Assistant"
+    ];
+    const tools = [
+        "Sony Camera",
+        "Blackmagic Camera",
+        "Drone",
+        "Custom Rig",
+        "Davinci Resolve"
+    ]
   return (
     <aside
         className="
@@ -15,7 +40,7 @@ export default function FilterSidebar() {
             Filters
         </h2>
 
-        <div className="space-y-2">
+        <div className="">
             <h3 className="
                 text-xs
                 uppercase
@@ -27,12 +52,12 @@ export default function FilterSidebar() {
             </h3>
             <div className="border-t border-white/10 my-6" />
 
-            <FilterCheckbox label="Narrative" />
-            <FilterCheckbox label="Commercial" />
-            <FilterCheckbox label="Music Video" />
-            <FilterCheckbox label="Youtube" />
-            <FilterCheckbox label="Vertical" />
-            <FilterCheckbox label="Software" />
+            {types.map((type) => (
+                <FilterCheckbox
+                key={type}
+                label={type}
+                />
+            ))}
         </div>
         <div>
             <h3 className="
@@ -44,15 +69,12 @@ export default function FilterSidebar() {
             >
                 Role
             </h3>
-
-            <FilterCheckbox label="Director" />
-            <FilterCheckbox label="Director of Photography" />
-            <FilterCheckbox label="1st Assistant Camera" />
-            <FilterCheckbox label="Gaffer" />
-            <FilterCheckbox label="Grip" />
-            <FilterCheckbox label="Editor" />
-            <FilterCheckbox label="Colorist" />
-            <FilterCheckbox label="Production Assistant" />
+            {roles.map((role) => (
+                <FilterCheckbox
+                key={role}
+                label={role}
+                />
+            ))}
       </div>
       <div>
             <h3 className="
@@ -65,11 +87,12 @@ export default function FilterSidebar() {
                 Tools Used
             </h3>
 
-            <FilterCheckbox label="Sony Camera" />
-            <FilterCheckbox label="Blackmagic Camera" />
-            <FilterCheckbox label="Drone" />
-            <FilterCheckbox label="Custom Rig" />
-            <FilterCheckbox label="Davinci Resolve" />
+            {tools.map((tool) => (
+                <FilterCheckbox
+                key={tool}
+                label={tool}
+                />
+            ))}
       </div>
         
     </aside>
