@@ -1,3 +1,5 @@
+import FilterCheckbox from "./FilterCheckbox";
+
 export default function FilterSidebar() {
   return (
     <aside
@@ -25,53 +27,12 @@ export default function FilterSidebar() {
             </h3>
             <div className="border-t border-white/10 my-6" />
 
-            <label
-                className="
-                    flex items-center gap-3
-                    py-2
-                    text-md
-                    text-gray-300
-                    cursor-pointer
-                ">
-                <input
-                    type="checkbox"
-                    className="peer sr-only"
-                />
-
-                <div
-                    className="
-                    h-4 w-4
-                    rounded
-                    border border-white/20
-                    bg-white/[0.02]
-
-                    peer-checked:bg-white
-                    peer-checked:border-white
-
-                    border border-white/20
-                        hover:border-white/40
-
-                    transition
-                    "
-                />
-                Narrative
-            </label>
-            <label>
-                <input type="checkbox"/>
-                Commercial
-            </label>
-            <label>
-                <input type="checkbox"/>
-                Youtube
-            </label>
-            <label>
-                <input type="checkbox"/>
-                Vertical
-            </label>
-            <label>
-                <input type="checkbox"/>
-                Software
-            </label>
+            <FilterCheckbox label="Narrative" />
+            <FilterCheckbox label="Commercial" />
+            <FilterCheckbox label="Music Video" />
+            <FilterCheckbox label="Youtube" />
+            <FilterCheckbox label="Vertical" />
+            <FilterCheckbox label="Software" />
         </div>
         <div>
             <h3 className="
@@ -84,34 +45,14 @@ export default function FilterSidebar() {
                 Role
             </h3>
 
-            <label>
-                <input type="checkbox"/>
-                Director
-            </label>
-            <label>
-                <input type="checkbox"/>
-                Director of Photography
-            </label>
-            <label>
-                <input type="checkbox"/>
-                1st Assistant Camera
-            </label>
-            <label>
-                <input type="checkbox"/>
-                Gaffer
-            </label>
-            <label>
-                <input type="checkbox"/>
-                Grip
-            </label>
-            <label>
-                <input type="checkbox"/>
-                Editor
-            </label>
-            <label>
-                <input type="checkbox"/>
-                Colorist
-            </label>
+            <FilterCheckbox label="Director" />
+            <FilterCheckbox label="Director of Photography" />
+            <FilterCheckbox label="1st Assistant Camera" />
+            <FilterCheckbox label="Gaffer" />
+            <FilterCheckbox label="Grip" />
+            <FilterCheckbox label="Editor" />
+            <FilterCheckbox label="Colorist" />
+            <FilterCheckbox label="Production Assistant" />
       </div>
       <div>
             <h3 className="
@@ -124,26 +65,11 @@ export default function FilterSidebar() {
                 Tools Used
             </h3>
 
-            <label>
-                <input type="checkbox"/>
-                Sony a7iv
-            </label>
-            <label>
-                <input type="checkbox"/>
-                Blackmagic Pocket 6k Pro
-            </label>
-            <label>
-                <input type="checkbox"/>
-                Drone
-            </label>
-            <label>
-                <input type="checkbox"/>
-                Custom Rigs
-            </label>
-            <label>
-                <input type="checkbox"/>
-                Davinci Resolve
-            </label>
+            <FilterCheckbox label="Sony Camera" />
+            <FilterCheckbox label="Blackmagic Camera" />
+            <FilterCheckbox label="Drone" />
+            <FilterCheckbox label="Custom Rig" />
+            <FilterCheckbox label="Davinci Resolve" />
       </div>
         
     </aside>
