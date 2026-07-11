@@ -9,7 +9,7 @@ export default function FilterCheckbox({
         <label
             className="
                 flex items-center gap-3
-                py-2
+                py-1
                 text-md
                 text-gray-300
                 cursor-pointer
