@@ -1,5 +1,6 @@
 import { work } from "../data/work";
 import WorkGrid from "../components/WorkGrid"
+import FilterSidebar from "../components/FilterSidebar";
 
 export default function WorksPage() {
   return (
@@ -15,9 +16,7 @@ export default function WorksPage() {
         <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-12">
 
           {/* Filters */}
-          <aside>
-            Filters go here
-          </aside>
+          <FilterSidebar />
           <WorkGrid
               projects={work}
               columns={3}
