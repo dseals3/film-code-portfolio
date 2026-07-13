@@ -40,6 +40,7 @@ export default function FilterSidebar() {
             Filters
         </h2>
 
+        <div className="border-t border-white/10 my-6" />
         <div className="">
             <h3 className="
                 text-xs
@@ -50,7 +51,6 @@ export default function FilterSidebar() {
             >
                 Work Type
             </h3>
-            <div className="border-t border-white/10 my-6" />
 
             {types.map((type) => (
                 <FilterCheckbox
@@ -59,6 +59,7 @@ export default function FilterSidebar() {
                 />
             ))}
         </div>
+        <div className="border-t border-white/10 my-6" />
         <div>
             <h3 className="
                 text-xs
@@ -76,6 +77,7 @@ export default function FilterSidebar() {
                 />
             ))}
       </div>
+      <div className="border-t border-white/10 my-6" />
       <div>
             <h3 className="
                 text-xs
