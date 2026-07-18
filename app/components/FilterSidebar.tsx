@@ -1,4 +1,5 @@
 import FilterCheckbox from "./FilterCheckbox";
+import FilterSection from "./FilterSection";
 
 export default function FilterSidebar() {
     const types = [
@@ -54,11 +55,19 @@ export default function FilterSidebar() {
 
             {types.map((type) => (
                 <FilterCheckbox
-                key={type}
-                label={type}
+                    key={type}
+                    label={type}
                 />
             ))}
         </div>
+        <FilterSection title="Work Type">
+            {types.map((type) => (
+                <FilterCheckbox
+                    key={type}
+                    label={type}
+                />
+            ))}
+        </FilterSection>
         <div className="border-t border-white/10 my-6" />
         <div>
             <h3 className="
