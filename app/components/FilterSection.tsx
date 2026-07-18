@@ -37,7 +37,6 @@ export default function FilterSection({
             className={`
                 transition-transform
                 ${isOpen ? "rotate-90" : ""}
-                lg:rotate-90
             `}
         />
         <h3
