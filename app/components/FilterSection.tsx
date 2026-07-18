@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronRight } from "lucide-react";
 
 export default function FilterSection({
@@ -10,7 +10,13 @@ export default function FilterSection({
   title: string;
   children: React.ReactNode;
 }) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth >= 1024) {
+        setIsOpen(true);
+    }
+  }, []);
 
   return (
     <div>
@@ -23,6 +29,7 @@ export default function FilterSection({
             gap-3
             text-left
             mb-3
+            hover:cursor-pointer
             "
         >
         <ChevronRight
@@ -30,6 +37,7 @@ export default function FilterSection({
             className={`
                 transition-transform
                 ${isOpen ? "rotate-90" : ""}
+                lg:rotate-90
             `}
         />
         <h3
@@ -44,11 +52,11 @@ export default function FilterSection({
         </h3>
       </button>
 
-      {isOpen && (
-        <div className="">
-          {children}
-        </div>
-      )}
+        {isOpen && (
+            <div>
+                {children}
+            </div>
+        )}
     </div>
   );
 }
