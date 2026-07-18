@@ -1,6 +1,7 @@
 import { work } from "../data/work";
 import WorkGrid from "../components/WorkGrid"
 import FilterSidebar from "../components/FilterSidebar";
+import MobileFilterWrapper from "../components/MobileFilterWrapper";
 
 export default function WorksPage() {
   return (
@@ -16,7 +17,9 @@ export default function WorksPage() {
         <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-12">
 
           {/* Filters */}
-          <FilterSidebar />
+          <MobileFilterWrapper>
+            <FilterSidebar />
+          </MobileFilterWrapper>
           <WorkGrid
               projects={work}
               columns={3}
