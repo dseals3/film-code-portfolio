@@ -21,7 +21,7 @@ export default function MobileFilterWrapper({
 
             flex
             items-center
-            justify-between
+            justify-center
 
             rounded-xl
             border border-white/10
@@ -30,19 +30,18 @@ export default function MobileFilterWrapper({
 
             px-4
             py-3
+            gap-3
 
             hover:bg-white/[0.04]
             hover:cursor-pointer
 
             transition"
       >
-          <div className="flex items-center gap-3">
-            <ListFilter size={18} />
+        <ListFilter size={18} />
 
-            <span className="font-medium">
-                Filters
-            </span>
-        </div>
+        <span className="font-medium">
+                {isOpen ? "Hide Filters" : "Filters"}
+        </span>
       </button>
 
       <div
