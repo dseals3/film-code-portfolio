@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 export default function FilterSection({
   title,
@@ -35,9 +36,13 @@ export default function FilterSection({
           {title}
         </span>
 
-        <span className="text-gray-500">
-          {isOpen ? "−" : "+"}
-        </span>
+        <ChevronDown
+            size={16}
+            className={`
+                transition-transform
+                ${isOpen ? "rotate-180" : ""}
+            `}
+        />
       </button>
 
       {isOpen && (
