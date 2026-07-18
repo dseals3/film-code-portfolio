@@ -30,7 +30,7 @@ export default function FilterSidebar() {
   return (
     <aside
         className="
-            sticky top-24
+            lg:sticky lg:top-24
             h-fit
             rounded-xl
             border border-white/10
