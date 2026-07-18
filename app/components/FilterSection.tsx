@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 export default function FilterSection({
   title,
@@ -14,17 +14,24 @@ export default function FilterSection({
 
   return (
     <div>
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="
-          w-full
-          flex
-          items-center
-          justify-between
-          text-left
-          mb-3
-        "
-      >
+        <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="
+            w-full
+            flex
+            items-center
+            gap-3
+            text-left
+            mb-3
+            "
+        >
+        <ChevronRight
+            size={16}
+            className={`
+                transition-transform
+                ${isOpen ? "rotate-90" : ""}
+            `}
+        />
         <span
           className="
             text-xs
@@ -35,14 +42,6 @@ export default function FilterSection({
         >
           {title}
         </span>
-
-        <ChevronDown
-            size={16}
-            className={`
-                transition-transform
-                ${isOpen ? "rotate-180" : ""}
-            `}
-        />
       </button>
 
       {isOpen && (
