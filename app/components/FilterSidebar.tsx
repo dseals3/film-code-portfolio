@@ -42,24 +42,6 @@ export default function FilterSidebar() {
         </h2>
 
         <div className="border-t border-white/10 my-6" />
-        <div className="">
-            <h3 className="
-                text-xs
-                uppercase
-                tracking-widest
-                text-gray-500
-                mb-3"
-            >
-                Work Type
-            </h3>
-
-            {types.map((type) => (
-                <FilterCheckbox
-                    key={type}
-                    label={type}
-                />
-            ))}
-        </div>
         <FilterSection title="Work Type">
             {types.map((type) => (
                 <FilterCheckbox
@@ -69,42 +51,23 @@ export default function FilterSidebar() {
             ))}
         </FilterSection>
         <div className="border-t border-white/10 my-6" />
-        <div>
-            <h3 className="
-                text-xs
-                uppercase
-                tracking-widest
-                text-gray-500
-                mb-3"
-            >
-                Role
-            </h3>
+        <FilterSection title="Roles">
             {roles.map((role) => (
                 <FilterCheckbox
                 key={role}
                 label={role}
                 />
             ))}
-      </div>
-      <div className="border-t border-white/10 my-6" />
-      <div>
-            <h3 className="
-                text-xs
-                uppercase
-                tracking-widest
-                text-gray-500
-                mb-3"
-            >
-                Tools Used
-            </h3>
-
+        </FilterSection>
+        <div className="border-t border-white/10 my-6" />
+        <FilterSection title="Tools Used">
             {tools.map((tool) => (
                 <FilterCheckbox
                 key={tool}
                 label={tool}
                 />
             ))}
-      </div>
+        </FilterSection>
         
     </aside>
   );
