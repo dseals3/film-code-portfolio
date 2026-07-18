@@ -32,7 +32,7 @@ export default function FilterSection({
                 ${isOpen ? "rotate-90" : ""}
             `}
         />
-        <span
+        <h3
           className="
             text-xs
             uppercase
@@ -41,11 +41,11 @@ export default function FilterSection({
           "
         >
           {title}
-        </span>
+        </h3>
       </button>
 
       {isOpen && (
-        <div className="space-y-2">
+        <div className="">
           {children}
         </div>
       )}
