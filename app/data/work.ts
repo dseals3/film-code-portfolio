@@ -4,7 +4,7 @@ export const work = [
   {
     slug: "for-those-who-feel-like-giving-up",
     title: "for those who feel like giving up...",
-    type: "youtube video",
+    type: "Youtube",
     year: "2025",
     thumbnail: "/images/dontgiveup/dontgiveup_thumbnail_720.png",
     previewVideo: "/video/dontgiveup-prv.mp4",
@@ -24,7 +24,7 @@ export const work = [
   {
     slug: "i-need-a-hero-commercial",
     title: "I Need a Hero: Life. Pass it on.",
-    type: "commercial",
+    type: "Commercial",
     year: "2026",
     thumbnail: "/images/liveonNY/liveonNY.jpg",
     previewVideo: "/video/liveonny-prv.mp4",
@@ -45,7 +45,7 @@ export const work = [
   {
     slug: "kpreme-pink-lemonade",
     title: "Kpreme - Pink Lemonade [Official Music Video]",
-    type: "music video",
+    type: "Music Video",
     year: "2026",
     thumbnail: "/images/pink-lemonade/kpreme-thnail.jpg",
     previewVideo: "/video/kpreme-prv.mp4",
@@ -69,7 +69,7 @@ export const work = [
   {
     slug: "dear-david",
     title: "Dear David | Knoxville 7 Day Shootout Film Competition",
-    type: "short film",
+    type: "Narrative",
     year: "2025",
     thumbnail: "/images/dear-david/dear-david-thnail.jpg",
     previewVideo: "/video/dear-david-prv.mp4",
@@ -156,7 +156,7 @@ export const work = [
   {
     slug: "an-active-day-in-my-life-short",
     title: "An Active Day in My Life (Sposored by EarthRunners)",
-    type: "vertical",
+    type: "Vertical",
     year: "2026",
     thumbnail: "",
     previewVideo: "",
@@ -173,7 +173,7 @@ export const work = [
   {
     slug: "job-listing",
     title: "Job Listing",
-    type: "youtube video",
+    type: "Youtube",
     year: "2024",
     thumbnail: "",
     previewVideo: "",
@@ -190,7 +190,7 @@ export const work = [
   {
     slug: "lets-talk-bap",
     title: "Lets talk *bap*",
-    type: "youtube video",
+    type: "Youtube",
     year: "2022",
     thumbnail: "",
     previewVideo: "",
@@ -207,7 +207,7 @@ export const work = [
   {
     slug: "charger-chums",
     title: "Charger Chums",
-    type: "commercial",
+    type: "Commercial",
     year: "2026",
     thumbnail: "",
     previewVideo: "",
@@ -224,7 +224,7 @@ export const work = [
   {
     slug: "metaverse-anomaly",
     title: "The Metaverse Anomaly",
-    type: "short film",
+    type: "Narrative",
     year: "2025",
     thumbnail: "",
     previewVideo: "",
@@ -241,7 +241,7 @@ export const work = [
   {
     slug: "korby-lenker-meet-me-at-the-end-of-the-world",
     title: "Korby Lenker - Meet Me at the End of the World (Official Video)",
-    type: "music video",
+    type: "Music Video",
     year: "2025",
     thumbnail: "",
     previewVideo: "",
@@ -258,7 +258,7 @@ export const work = [
   {
     slug: "gatlinburg-short",
     title: "I found this in Gatlinburg, TN aand CClimbed to see what it was🤔",
-    type: "vertical",
+    type: "Vertical",
     year: "2023",
     thumbnail: "",
     previewVideo: "",
@@ -275,7 +275,7 @@ export const work = [
   {
     slug: "canada-short",
     title: "Canada is on 🔥FIRE🔥 Right Now",
-    type: "vertical",
+    type: "Vertical",
     year: "2023",
     thumbnail: "",
     previewVideo: "",
@@ -292,7 +292,7 @@ export const work = [
   {
     slug: "earthrunners-short",
     title: "If there's one thing I'm passionate about, it's my #earthrunners",
-    type: "vertical",
+    type: "Vertical",
     year: "2023",
     thumbnail: "",
     previewVideo: "",
