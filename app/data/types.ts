@@ -31,4 +31,6 @@ export type WorkItem = {
     description: string;
     previewVideo: string;
     fullVideo: string;
+    roles: string[];
+    meta?: Partial<ProjectMeta>;
 };
