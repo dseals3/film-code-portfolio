@@ -1,9 +1,28 @@
+"use client"
+
 import { work } from "../data/work";
 import WorkGrid from "../components/WorkGrid"
 import FilterSidebar from "../components/FilterSidebar";
 import MobileFilterWrapper from "../components/MobileFilterWrapper";
+import { useState } from "react";
 
 export default function WorksPage() {
+  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+
+  const filteredProjects =
+  selectedTypes.length === 0
+    ? work
+    : work.filter((project) =>
+        selectedTypes.includes(project.type)
+      );
+
+  function toggleType(type: string) {
+    setSelectedTypes((prev) =>
+      prev.includes(type)
+        ? prev.filter((t) => t !== type)
+        : [...prev, type]
+    );
+  }
   return (
     <main className="min-h-screen bg-black text-white p-8 py-24">
       <div className="max-w-6xl mx-auto">
@@ -18,10 +37,13 @@ export default function WorksPage() {
 
           {/* Filters */}
           <MobileFilterWrapper>
-            <FilterSidebar />
+            <FilterSidebar
+              selectedTypes={selectedTypes}
+              toggleType={toggleType}
+            />
           </MobileFilterWrapper>
           <WorkGrid
-              projects={work}
+              projects={filteredProjects}
               columns={3}
               showDescription
               descriptionLines={2}
