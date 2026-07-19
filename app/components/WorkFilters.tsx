@@ -11,29 +11,50 @@ type WorkFiltersProps = {
 };
 
 export default function WorkFilters({ projects }: WorkFiltersProps) {
-  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+    const [filters, setFilters] = useState({
+        types: [] as string[],
+        roles: [] as string[],
+        tools: [] as string[],
+    });
 
-  const filteredProjects =
-    selectedTypes.length === 0
-      ? projects
-      : projects.filter((project) =>
-          selectedTypes.includes(project.type)
-        );
+    function toggleFilter(
+        category: "types" | "roles" | "tools",
+        value: string
+        ) {
+        setFilters((prev) => ({
+            ...prev,
+            [category]: prev[category].includes(value)
+            ? prev[category].filter((item) => item !== value)
+            : [...prev[category], value],
+        }));
+    }
 
-  function toggleType(type: string) {
-    setSelectedTypes((prev) =>
-      prev.includes(type)
-        ? prev.filter((t) => t !== type)
-        : [...prev, type]
-    );
-  }
+    const filteredProjects = projects.filter((project) => {
+        const matchesType =
+            filters.types.length === 0 ||
+            filters.types.includes(project.type);
+
+        const matchesRole =
+            filters.roles.length === 0 ||
+            project.roles?.some((role) =>
+            filters.roles.includes(role)
+            );
+
+        const matchesTool =
+            filters.tools.length === 0 ||
+            project.meta?.tools?.some((tool) =>
+            filters.tools.includes(tool)
+            );
+
+        return matchesType && matchesRole && matchesTool;
+    });
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-12">
       <MobileFilterWrapper>
         <FilterSidebar
-          selectedTypes={selectedTypes}
-          toggleType={toggleType}
+          filters={filters}
+          toggleFilter={toggleFilter}
         />
       </MobileFilterWrapper>
 
