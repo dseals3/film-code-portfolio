@@ -1,9 +1,11 @@
 type FilterCheckboxProps = {
     label: string;
+    checked: boolean;
+    onChange: () => void;
 };
 
 export default function FilterCheckbox({
-    label,
+    label, checked, onChange
 }: FilterCheckboxProps) {
     return (
         <label
@@ -16,6 +18,8 @@ export default function FilterCheckbox({
             ">
             <input
                 type="checkbox"
+                checked={checked}
+                onChange={onChange}
                 className="peer sr-only"
             />
 
