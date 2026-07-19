@@ -4,16 +4,29 @@ export type ProjectMeta = Record<MetaKey, string[]>;
 
 export type Project = {
   slug: string;
+
   title: string;
+  type: string;
+  year: string;
   description: string;
+
+  thumbnail: string;
+  previewVideo: string;
+  fullVideo: string;
+
+  authorship?: string;
   roles: string[];
 
   meta?: Partial<ProjectMeta>;
 
+  btsImages: string[];
+
+  contributions?: string;
+
   challenges?: {
     title: string;
-    description: string;
-    takeaway?: string;
+    subtitle: string;
+    solution?: string;
   }[];
 
   devHighlights?: {
@@ -21,6 +34,8 @@ export type Project = {
     description: string;
     code: string;
   }[];
+
+  featured: boolean;
 };
 
 export type WorkItem = {
