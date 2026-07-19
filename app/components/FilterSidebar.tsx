@@ -2,13 +2,21 @@ import FilterCheckbox from "./FilterCheckbox";
 import FilterSection from "./FilterSection";
 
 type FilterSidebarProps = {
-  selectedTypes: string[];
-  toggleType: (type: string) => void;
+  filters: {
+    types: string[];
+    roles: string[];
+    tools: string[];
+  };
+
+  toggleFilter: (
+    category: "types" | "roles" | "tools",
+    value: string
+  ) => void;
 };
 
 export default function FilterSidebar({
-    selectedTypes,
-    toggleType,
+    filters,
+    toggleFilter,
 }: FilterSidebarProps) {
     const types = [
         "Narrative",
@@ -55,8 +63,8 @@ export default function FilterSidebar({
                 <FilterCheckbox
                     key={type}
                     label={type}
-                    checked={selectedTypes.includes(type)}
-                    onChange={() => toggleType(type)}
+                    checked={filters.types.includes(type)}
+                    onChange={() => toggleFilter("types", type)}
                 />
             ))}
         </FilterSection>
@@ -66,6 +74,8 @@ export default function FilterSidebar({
                 <FilterCheckbox
                 key={role}
                 label={role}
+                checked={filters.roles.includes(role)}
+                onChange={() => toggleFilter("roles", role)}
                 />
             ))}
         </FilterSection>
@@ -75,6 +85,8 @@ export default function FilterSidebar({
                 <FilterCheckbox
                 key={tool}
                 label={tool}
+                checked={filters.tools.includes(tool)}
+                onChange={() => toggleFilter("tools", tool)}
                 />
             ))}
         </FilterSection>
