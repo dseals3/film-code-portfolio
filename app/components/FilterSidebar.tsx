@@ -1,7 +1,15 @@
 import FilterCheckbox from "./FilterCheckbox";
 import FilterSection from "./FilterSection";
 
-export default function FilterSidebar() {
+type FilterSidebarProps = {
+  selectedTypes: string[];
+  toggleType: (type: string) => void;
+};
+
+export default function FilterSidebar({
+    selectedTypes,
+    toggleType,
+}: FilterSidebarProps) {
     const types = [
         "Narrative",
         "Commercial",
@@ -47,6 +55,8 @@ export default function FilterSidebar() {
                 <FilterCheckbox
                     key={type}
                     label={type}
+                    checked={selectedTypes.includes(type)}
+                    onChange={() => toggleType(type)}
                 />
             ))}
         </FilterSection>
