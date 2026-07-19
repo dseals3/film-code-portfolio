@@ -18,7 +18,7 @@ export default function FilterCheckbox({
             ">
             <input
                 type="checkbox"
-                checked={checked}
+                checked={checked ?? false}
                 onChange={onChange}
                 className="peer sr-only"
             />
