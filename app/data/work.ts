@@ -94,11 +94,12 @@ export const work: Project[] = [
     thumbnail: "/images/homepage-current.png",
     previewVideo: "/video/code-prv.mp4",
     fullVideo: "",
+    authorship: "Created Entirely by Damian Seals",
     roles: ["Designer", "Developer", "Site Owner"],
     meta: {
       tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"]
     },
-    authorship: "Created Entirely by Damian Seals",
+    btsImages: [],
     contributions: "Designed the site's visual identity and user experience, developed the frontend using Next.js, TypeScript, and Tailwind CSS, implemented responsive layouts and reusable components, integrated video and image galleries, and deployed the application to production on a custom domain using Vercel.",
     challenges: [
       {
@@ -147,7 +148,7 @@ export const work: Project[] = [
         code: `<ProjectMeta meta={project.meta} />`
       }
     ],
-    btsImages: [],
+    learnings: "Building and maintaining the site provided experience across the entire application lifecycle, from architecture and frontend development to deployment, troubleshooting, and ongoing maintenance. The project strengthened my understanding of Next.js, TypeScript, Git workflows, DNS configuration, performance optimization, and production hosting environments.",
     featured: true
   },
   {
