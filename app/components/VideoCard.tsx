@@ -1,20 +1,20 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import type { WorkItem } from "../data/types";
+import type { ProjectCardData } from "../data/types";
 
 type VideoCardProps = {
-  item: WorkItem;
+  project: ProjectCardData;
   showDescription?: boolean;
   descriptionLines?: number;
 }
 
 export default function VideoCard({
-    item,
+    project,
     showDescription = true,
     descriptionLines = 3,
 }: VideoCardProps) {
-    const isVertical = item.type === "vertical";
+    const isVertical = project.type === "Vertical";
     const videoRef = useRef<HTMLVideoElement>(null);
     useEffect(() => {
         const video = videoRef.current;
@@ -44,7 +44,7 @@ export default function VideoCard({
         };
     return (
     
-    <Link href={`/projects/${item.slug}`}
+    <Link href={`/projects/${project.slug}`}
         className="group block relative bg-zinc-900 rounded-xl hover:bg-zinc-800 transition overflow-hidden self-start"
         >
             
@@ -55,7 +55,7 @@ export default function VideoCard({
                 <video
                     ref={videoRef}
                     className="w-full h-full object-cover"
-                    src={item.previewVideo || undefined}
+                    src={project.previewVideo || undefined}
                     autoPlay
                     muted
                     loop
@@ -73,16 +73,16 @@ export default function VideoCard({
             {isVertical && (
                 <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
                     <div className="flex justify-between text-xs text-gray-300 uppercase mb-2">
-                        <span>{item.type}</span>
-                        <span>{item.year}</span>
+                        <span>{project.type}</span>
+                        <span>{project.year}</span>
                     </div>
 
                     <h3 className="text-lg font-semibold text-white">
-                        {item.title}
+                        {project.title}
                     </h3>
                     {showDescription && (
                         <p className={`text-sm text-gray-300 ${lineClampClass[descriptionLines as 2 | 3]}`}>
-                            {item.description}
+                            {project.description}
                         </p>
                     )}
                 </div>
@@ -93,16 +93,16 @@ export default function VideoCard({
         {!isVertical && (
             <div className="p-5 space-y-3">
                 <div className="flex justify-between text-xs text-gray-400 uppercase">
-                    <span>{item.type}</span>
-                    <span>{item.year}</span>
+                    <span>{project.type}</span>
+                    <span>{project.year}</span>
                 </div>
 
                 <h3 className="text-xl font-semibold text-white">
-                    {item.title}
+                    {project.title}
                 </h3>
                 {showDescription && (
                     <p className={`text-sm text-gray-400 ${lineClampClass[descriptionLines as 2 | 3]}`}>
-                        {item.description}
+                        {project.description}
                     </p>
                 )}
             </div>
