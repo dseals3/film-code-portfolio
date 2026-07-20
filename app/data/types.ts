@@ -35,17 +35,18 @@ export type Project = {
     code: string;
   }[];
 
+  learnings?: string;
+
   featured: boolean;
 };
 
-export type WorkItem = {
-    slug: string;
-    title: string;
-    type: string;
-    year: string;
-    description: string;
-    previewVideo: string;
-    fullVideo: string;
-    roles: string[];
-    meta?: Partial<ProjectMeta>;
-};
+export type ProjectCardData = Pick<
+  Project,
+  | "slug"
+  | "title"
+  | "type"
+  | "year"
+  | "description"
+  | "thumbnail"
+  | "previewVideo"
+>;
