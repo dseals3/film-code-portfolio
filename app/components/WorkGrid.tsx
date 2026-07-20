@@ -1,8 +1,8 @@
 import VideoCard from "./VideoCard";
-import type { WorkItem } from "@/app/data/types";
+import type { ProjectCardData } from "@/app/data/types";
 
 type WorkGridProps = {
-    projects: WorkItem[];
+    projects: ProjectCardData[];
     columns?: 2 | 3 | 4;
     showDescription?: boolean;
     descriptionLines?: number;
@@ -19,10 +19,10 @@ export default function WorkGrid({projects, columns = 2, showDescription, descri
             grid grid-cols-1
             ${gridCols[columns]}
             max-w-6xl mx-auto gap-6`}>
-            {projects.map((item) => (
+            {projects.map((project) => (
                 <VideoCard
-                    key={item.slug}
-                    item={item}
+                    key={project.slug}
+                    project={project}
                     showDescription={showDescription}
                     descriptionLines={descriptionLines}
                 />
