@@ -4,10 +4,10 @@ import { useState } from "react";
 import FilterSidebar from "./FilterSidebar";
 import MobileFilterWrapper from "./MobileFilterWrapper";
 import WorkGrid from "./WorkGrid";
-import type { WorkItem } from "../data/types";
+import type { Project, ProjectCardData } from "../data/types";
 
 type WorkFiltersProps = {
-  projects: WorkItem[];
+  projects: Project[];
 };
 
 export default function WorkFilters({ projects }: WorkFiltersProps) {
@@ -45,9 +45,20 @@ export default function WorkFilters({ projects }: WorkFiltersProps) {
             project.meta?.tools?.some((tool) =>
             filters.tools.includes(tool)
             );
+        
 
         return matchesType && matchesRole && matchesTool;
     });
+
+    const cardProjects: ProjectCardData[] = filteredProjects.map((project) => ({
+      slug: project.slug,
+      title: project.title,
+      type: project.type,
+      year: project.year,
+      description: project.description,
+      thumbnail: project.thumbnail,
+      previewVideo: project.previewVideo,
+    }));
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-12">
@@ -59,7 +70,7 @@ export default function WorkFilters({ projects }: WorkFiltersProps) {
       </MobileFilterWrapper>
 
       <WorkGrid
-        projects={filteredProjects}
+        projects={cardProjects}
         columns={3}
         showDescription
         descriptionLines={2}
