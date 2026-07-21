@@ -1,5 +1,6 @@
 import FilterCheckbox from "./FilterCheckbox";
 import FilterSection from "./FilterSection";
+import { workTypes, roles, tools } from "../data/filterOptions";
 
 type FilterSidebarProps = {
   filters: {
@@ -18,31 +19,6 @@ export default function FilterSidebar({
     filters,
     toggleFilter,
 }: FilterSidebarProps) {
-    const types = [
-        "Narrative",
-        "Commercial",
-        "Music Video",
-        "Youtube",
-        "Vertical",
-        "Software",
-    ];
-    const roles = [
-        "Director",
-        "Director of Photography",
-        "1st Assistant Camera",
-        "Gaffer",
-        "Grip",
-        "Editor",
-        "Colorist",
-        "Production Assistant"
-    ];
-    const tools = [
-        "Sony Camera",
-        "Blackmagic Camera",
-        "Drone",
-        "Custom Rig",
-        "Davinci Resolve"
-    ]
   return (
     <aside
         className="
@@ -59,7 +35,7 @@ export default function FilterSidebar({
 
         <div className="border-t border-white/10 my-6" />
         <FilterSection title="Work Type">
-            {types.map((type) => (
+            {workTypes.map((type) => (
                 <FilterCheckbox
                     key={type}
                     label={type}
