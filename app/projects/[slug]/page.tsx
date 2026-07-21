@@ -20,6 +20,7 @@ export async function generateStaticParams() {
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
     const project = work.find((item) => item.slug === slug);
+    const thumbnail = `/images/projects/${project.slug}/thumbnail.jpg`;
 
     if (!project) {
         return <div className="p-10 text-white">Project not found</div>;
@@ -58,9 +59,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
           {/* VIDEO */}
             {project.fullVideo ? (
-              <VideoPlayer src={project.fullVideo} thumbnail={project.thumbnail} />
-            ) : project.thumbnail ? (
-              <ImageViewer src={project.thumbnail} alt={project.title} />
+              <VideoPlayer src={project.fullVideo} thumbnail={thumbnail} />
+            ) : thumbnail ? (
+              <ImageViewer src={thumbnail} alt={project.title} />
             ) : null}
       </div>
             
