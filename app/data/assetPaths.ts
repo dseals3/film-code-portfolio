@@ -15,7 +15,7 @@ export function projectBTS(
     (_, i) =>
       projectImage(
         slug,
-        `bts-${String(i + 1).padStart(2, "0")}.jpg`
+        `bts-${String(i + 1)}.jpg`
       )
   );
 }
