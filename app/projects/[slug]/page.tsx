@@ -1,4 +1,5 @@
-import { work } from "../../data/work";
+import { work } from "@/app/data/work";
+import { projectThumbnail, projectBTS } from "@/app/data/assetPaths";
 
 import VideoPlayer from "@/app/components/VideoPlayer"
 import ImageViewer from "@/app/components/ImageViewer";
@@ -9,7 +10,6 @@ import BTSGallery from "@/app/components/BTSGallery"
 import Footer from "@/app/components/Footer";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import { Section } from "lucide-react";
 
 export async function generateStaticParams() {
   return work.map((item) => ({
@@ -20,7 +20,10 @@ export async function generateStaticParams() {
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
     const project = work.find((item) => item.slug === slug);
-    const thumbnail = `/images/projects/${project.slug}/thumbnail.jpg`;
+    const thumbnail = projectThumbnail(project.slug);
+    const btsImages = project.btsCount
+      ? projectBTS(project.slug, project.btsCount)
+      : [];
 
     if (!project) {
         return <div className="p-10 text-white">Project not found</div>;
@@ -196,13 +199,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </section>
         )}
 
-        {/* BEHIND THE SCENES PHOTOS */}    
-        {project.btsImages && project.btsImages.length > 0 && (
+        {/* BEHIND THE SCENES PHOTOS */}
+        {btsImages.length > 0 && (
           <section className="mt-16">
             <SectionHeading>Behind the Scenes</SectionHeading>
 
-            {/* GALLERY */}
-            <BTSGallery images={project.btsImages} />
+            <BTSGallery images={btsImages} />
           </section>
         )}
       </div>
