@@ -76,7 +76,7 @@ export const work: Project[] = [
     fullVideo: "https://www.youtube.com/embed/XZF__F6svTU",
     roles: ["Director of Photography", "Colorist"],
     meta: {
-      tools: ["Sony A7iv", "Sony FX30", "Amaran 300c", "C-Stand", "Davinci Resolve"]
+      tools: ["Sony a7iv", "Sony FX30", "Amaran 300c", "C-Stand", "Davinci Resolve"]
     },
     btsImages: [
       "/images/dear-david/dd-bts-1.jpg",
@@ -163,7 +163,7 @@ export const work: Project[] = [
     authorship: "Created Entirely by Damian Seals",
     roles: ["Writer", "Director", "Director of Photography", "Gaffer", "Editor", "Colorist"],
     meta: {
-      tools: ["Sony A7iv", "GoPro", "Lights", "C-Stand", "Davinci Resolve"]
+      tools: ["Sony a7iv", "GoPro", "Lights", "C-Stand", "Davinci Resolve"]
     },
     btsImages: [],
     featured: false
@@ -180,7 +180,7 @@ export const work: Project[] = [
     authorship: "",
     roles: ["Actor", "Editor", "Colorist"],
     meta: {
-      tools: ["Sony A7iv", "C-Stand", "Davinci Resolve"]
+      tools: ["Sony a7iv", "C-Stand", "Davinci Resolve"]
     },
     btsImages: [],
     featured: false
@@ -197,7 +197,7 @@ export const work: Project[] = [
     authorship: "A One-Man Production by Damian Seals",
     roles: ["Director of Photography", "Gaffer", "Editor", "Colorist"],
     meta: {
-      tools: ["Sony A7iv", "Lights", "C-Stand", "Davinci Resolve"]
+      tools: ["Sony a7iv", "Lights", "C-Stand", "Davinci Resolve"]
     },
     btsImages: [],
     featured: false
@@ -214,7 +214,7 @@ export const work: Project[] = [
     authorship: "",
     roles: ["2nd AC"],
     meta: {
-      tools: ["Blackmagic Pocket 6k Pro", "Lights", "Stands", "My Phone"]
+      tools: ["Blackmagic Pocket 6k Pro", "Lights", "Stands", "iPhone 12"]
     },
     btsImages: [],
     featured: false
