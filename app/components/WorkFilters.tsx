@@ -5,6 +5,7 @@ import FilterSidebar from "./FilterSidebar";
 import MobileFilterWrapper from "./MobileFilterWrapper";
 import WorkGrid from "./WorkGrid";
 import type { Project, ProjectCardData } from "../data/types";
+import { toolFilters } from "../data/filterOptions";
 
 type WorkFiltersProps = {
   projects: Project[];
@@ -41,10 +42,12 @@ export default function WorkFilters({ projects }: WorkFiltersProps) {
             );
 
         const matchesTool =
-            filters.tools.length === 0 ||
-            project.meta?.tools?.some((tool) =>
-            filters.tools.includes(tool)
-            );
+          filters.tools.length === 0 ||
+          project.meta?.tools?.some((tool) =>
+            filters.tools.some((filter) =>
+              toolFilters[filter].includes(tool)
+            )
+          );
         
 
         return matchesType && matchesRole && matchesTool;
