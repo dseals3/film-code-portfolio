@@ -14,6 +14,7 @@ export default function VideoCard({
     showDescription = true,
     descriptionLines = 3,
 }: VideoCardProps) {
+    const thumbnail = `/images/projects/${project.slug}/thumbnail.jpg`;
     const isVertical = project.type === "Vertical";
     const videoRef = useRef<HTMLVideoElement>(null);
     useEffect(() => {
@@ -52,16 +53,24 @@ export default function VideoCard({
             <div className={`relative w-full overflow-hidden
                 ${isVertical ? "aspect-[9/16]" : "aspect-video"
             }`}>
-                <video
-                    ref={videoRef}
-                    className="w-full h-full object-cover"
-                    src={project.previewVideo || undefined}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                />
+                {project.previewVideo ? (
+                    <video
+                        ref={videoRef}
+                        className="w-full h-full object-cover"
+                        src={project.previewVideo || undefined}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                    />
+                ) : (
+                    <img
+                        src={thumbnail}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                    />
+                )}
             {/* Hover CTA */}
             <div className="absolute top-4 right-4 z-10">
                 <div className="px-3 py-1 text-sm text-gray-300 bg-black/60 text-white rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition">
