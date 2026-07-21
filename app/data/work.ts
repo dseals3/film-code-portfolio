@@ -13,10 +13,7 @@ export const work: Project[] = [
     meta: {
       tools: ["Sony a7iv", "Sony ZV-E1", "DJI Mini 3 Pro", "Custom Drop Rig", "Lights", "Stands", "Hazer", "Davinci Resolve",]
     },
-    btsImages: [
-      "/images/dontgiveup/240.jpg",
-      "/images/dontgiveup/cam-blue.jpg"
-    ],
+    btsCount: 2,
     featured: true
   },
   {
@@ -31,12 +28,7 @@ export const work: Project[] = [
     meta: {
       tools: ["Lights", "C-Stands"]
     },
-    btsImages: [
-      "/images/liveonNY/ny-bts-1.jpg",
-      "/images/liveonNY/ny-bts-2.jpg",
-      "/images/liveonNY/ny-bts-3.jpg",
-      "/images/liveonNY/ny-bts-4.jpg"
-    ],
+    btsCount: 4,
     featured: true
   },
   {
@@ -51,15 +43,7 @@ export const work: Project[] = [
     meta: {
       tools: ["Blackmagic Pocket 6k Pro", "Plexiglass Platform"]
     },
-    btsImages: [
-      "/images/pink-lemonade/pl-bts-1.jpg",
-      "/images/pink-lemonade/pl-bts-3.jpg",
-      "/images/pink-lemonade/pl-bts-4.jpg",
-      "/images/pink-lemonade/pl-bts-5.jpg",
-      "/images/pink-lemonade/pl-bts-6.jpg",
-      "/images/pink-lemonade/pl-bts-7.jpg",
-
-    ],
+    btsCount: 6,
     featured: true
   },
   {
@@ -74,11 +58,7 @@ export const work: Project[] = [
     meta: {
       tools: ["Sony a7iv", "Sony FX30", "Amaran 300c", "C-Stand", "Davinci Resolve"]
     },
-    btsImages: [
-      "/images/dear-david/dd-bts-1.jpg",
-      "/images/dear-david/dd-bts-2.jpg",
-      "/images/dear-david/dd-bts-3.jpg",
-    ],
+    btsCount: 3,
     featured: true
   },
   {
@@ -94,7 +74,7 @@ export const work: Project[] = [
     meta: {
       tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"]
     },
-    btsImages: [],
+    btsCount: 0,
     contributions: "Designed the site's visual identity and user experience, developed the frontend using Next.js, TypeScript, and Tailwind CSS, implemented responsive layouts and reusable components, integrated video and image galleries, and deployed the application to production on a custom domain using Vercel.",
     challenges: [
       {
@@ -159,7 +139,7 @@ export const work: Project[] = [
     meta: {
       tools: ["Sony a7iv", "GoPro", "Lights", "C-Stand", "Davinci Resolve"]
     },
-    btsImages: [],
+    btsCount: 0,
     featured: false
   },
   {
@@ -175,7 +155,7 @@ export const work: Project[] = [
     meta: {
       tools: ["Sony a7iv", "C-Stand", "Davinci Resolve"]
     },
-    btsImages: [],
+    btsCount: 0,
     featured: false
   },
   {
@@ -191,7 +171,7 @@ export const work: Project[] = [
     meta: {
       tools: ["Sony a7iv", "Lights", "C-Stand", "Davinci Resolve"]
     },
-    btsImages: [],
+    btsCount: 0,
     featured: false
   },
   {
@@ -207,7 +187,7 @@ export const work: Project[] = [
     meta: {
       tools: ["Blackmagic Pocket 6k Pro", "Lights", "Stands", "iPhone 12"]
     },
-    btsImages: [],
+    btsCount: 0,
     featured: false
   },
   {
@@ -223,7 +203,7 @@ export const work: Project[] = [
     meta: {
       tools: ["Blackmagic Pocket 6k Pro", "Lights", "Drill"]
     },
-    btsImages: [],
+    btsCount: 0,
     featured: false
   },
   {
@@ -239,7 +219,7 @@ export const work: Project[] = [
     meta: {
       tools: []
     },
-    btsImages: [],
+    btsCount: 0,
     featured: false
   },
   {
@@ -255,7 +235,7 @@ export const work: Project[] = [
     meta: {
       tools: ["iPhone 12", "Rode VideoMic NTG", "Davinci Resolve"]
     },
-    btsImages: [],
+    btsCount: 0,
     featured: false
   },
   {
@@ -271,7 +251,7 @@ export const work: Project[] = [
     meta: {
       tools: ["Rode VideoMic NTG", "Davinci Resolve"]
     },
-    btsImages: [],
+    btsCount: 0,
     featured: false
   },
   {
@@ -287,7 +267,7 @@ export const work: Project[] = [
     meta: {
       tools: ["Sony a7iv", "GoPro", "Lights", "C-Stand", "Rode VideoMic NTG", "Davinci Resolve"]
     },
-    btsImages: [],
+    btsCount: 0,
     featured: false
   },
 ];
