@@ -8,6 +8,8 @@ import SectionHeading from "@/app/components/SectionHeading";
 import CodeBlock from "@/app/components/CodeBlock";
 import BTSGallery from "@/app/components/BTSGallery"
 import Footer from "@/app/components/Footer";
+
+import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
@@ -20,6 +22,9 @@ export async function generateStaticParams() {
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
     const project = work.find((item) => item.slug === slug);
+    if (!project) {
+      notFound();
+    }
     const thumbnail = projectThumbnail(project.slug);
     const btsImages = project.btsCount
       ? projectBTS(project.slug, project.btsCount)
