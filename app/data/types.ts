@@ -18,7 +18,7 @@ export type Project = {
 
   meta?: Partial<ProjectMeta>;
 
-  btsImages: string[];
+  btsCount?: number;
 
   contributions?: string;
 
