@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import type { ProjectCardData } from "../data/types";
+import { projectThumbnail } from "../data/assetPaths";
 
 type VideoCardProps = {
   project: ProjectCardData;
@@ -14,7 +15,7 @@ export default function VideoCard({
     showDescription = true,
     descriptionLines = 3,
 }: VideoCardProps) {
-    const thumbnail = `/images/projects/${project.slug}/thumbnail.jpg`;
+    const thumbnail = projectThumbnail(project.slug);
     const isVertical = project.type === "Vertical";
     const videoRef = useRef<HTMLVideoElement>(null);
     useEffect(() => {
