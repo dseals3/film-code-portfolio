@@ -214,7 +214,7 @@ export const work: Project[] = [
     authorship: "",
     roles: ["2nd AC"],
     meta: {
-      tools: ["Blackmagic Pocket 6k", "Lights", "Stands", "My Phone"]
+      tools: ["Blackmagic Pocket 6k Pro", "Lights", "Stands", "My Phone"]
     },
     btsImages: [],
     featured: false
@@ -231,7 +231,7 @@ export const work: Project[] = [
     authorship: "",
     roles: ["Production Assistant"],
     meta: {
-      tools: ["Blackmagic Pocket 6k", "Lights", "Drill"]
+      tools: ["Blackmagic Pocket 6k Pro", "Lights", "Drill"]
     },
     btsImages: [],
     featured: false
