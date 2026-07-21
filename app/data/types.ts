@@ -10,7 +10,6 @@ export type Project = {
   year: string;
   description: string;
 
-  thumbnail: string;
   previewVideo: string;
   fullVideo: string;
 
@@ -47,6 +46,5 @@ export type ProjectCardData = Pick<
   | "type"
   | "year"
   | "description"
-  | "thumbnail"
   | "previewVideo"
 >;
