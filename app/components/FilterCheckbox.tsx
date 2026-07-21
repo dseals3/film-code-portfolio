@@ -10,11 +10,15 @@ export default function FilterCheckbox({
     return (
         <label
             className="
+                group
                 flex items-center gap-3
                 py-1
                 text-md
                 text-gray-300
                 cursor-pointer
+                select-none
+                hover:text-white
+                transition-colors
             ">
             <input
                 type="checkbox"
@@ -23,7 +27,7 @@ export default function FilterCheckbox({
                 className="peer sr-only"
             />
 
-            <div
+            <span
                 className="
                 h-4 w-4
                 rounded
@@ -33,12 +37,30 @@ export default function FilterCheckbox({
                 peer-checked:bg-white
                 peer-checked:border-white
 
-                border border-white/20
-                    hover:border-white/40
+                group-hover:border-white/40
 
                 transition
+                flex items-center justify-center
                 "
-            />
+            >
+                <svg
+                    className="
+                        h-3 w-3
+                        text-black
+                        opacity-0
+                        group-has-[:checked]:opacity-100
+                        transition-opacity
+                    "
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                >
+                    <polyline points="20 6 9 17 4 12" />
+                </svg>
+            </span>
             {label}
         </label>
     );
