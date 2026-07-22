@@ -223,8 +223,8 @@ export const work: Project[] = [
     featured: false
   },
   {
-    slug: "gatlinburg-short",
-    title: "I found this in Gatlinburg, TN aand CClimbed to see what it was🤔",
+    slug: "gatlinburg-find",
+    title: "I found this in Gatlinburg, TN and Climbed to see what it was🤔",
     type: "Vertical",
     year: "2023",
     description: "I'm very familiar with the Great Smoky Mountains, Gatlinburg, and Pigeon Forge being a Tennessee native, but climbing up the side of a mountain as high as this just to check something out is not something I do terribly often.\n\nAlso, my thoughts and prayers go out to those families who lost loved ones, were injured, went homeless, or struggled at all as a result of the 2016 fires. They started on the Chimney Tops Trail and expanded into the Great Smoky Mountains National Park, Gatlinburg, Pigeon Forge, all within Sevier County, places I am very familiar with.\n\nLuckily from what I can see, most everyone has recovered from the fires, yet I am sure everyone involved still has a scar to prove it happened, whether that scar is physical, emotional, or financial.",
@@ -239,7 +239,7 @@ export const work: Project[] = [
     featured: false
   },
   {
-    slug: "canada-short",
+    slug: "canada-wildfires",
     title: "Canada is on 🔥FIRE🔥 Right Now",
     type: "Vertical",
     year: "2023",
