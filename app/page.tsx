@@ -75,8 +75,7 @@ export default function Home() {
             >
               <span className="relative">
                 View All Work
-                <span className="absolute -bottom-1 left-1/2 h-px w-[75%] -translate-x-1/2 origin-center scale-x-0 bg-neutral-500/30 transition-transform duration-200 group-hover:scale-x-100" />
-
+                {/* <span className="absolute -bottom-1 left-1/2 h-px w-[75%] -translate-x-1/2 origin-center scale-x-0 bg-neutral-500/30 transition-transform duration-200 group-hover:scale-x-100" /> */}
               </span>
 
               <span className="transition-transform duration-200 group-hover:translate-x-1">
@@ -95,12 +94,21 @@ export default function Home() {
           on mood, pacing, and visual clarity.
         </p>
 
-        <Link
-            href="/about"
-            className="inline-block mt-8 text-sm text-gray-400 hover:text-white transition"
-          >
-            Read More →
-        </Link>
+        <div className="mt-8 flex justify-center">
+          <Link
+              href="/projects"
+              className="group relative inline-flex items-center gap-2 text-sm font-medium text-neutral-400 transition-colors hover:text-white duration-200"
+            >
+              <span className="relative">
+                Read More
+                {/* <span className="absolute -bottom-1 left-1/2 h-px w-[75%] -translate-x-1/2 origin-center scale-x-0 bg-neutral-500/30 transition-transform duration-200 group-hover:scale-x-100" /> */}
+              </span>
+
+              <span className="transition-transform duration-200 group-hover:translate-x-1">
+                →
+              </span>
+          </Link>
+        </div>
       </section>
       <Footer />
     </main>
