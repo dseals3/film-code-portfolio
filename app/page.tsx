@@ -65,9 +65,25 @@ export default function Home() {
           showDescription
           descriptionLines={3}
         />
-        <p className="mt-12 text-center text-gray-500 text-sm">
+        <p className="mt-10 text-center text-gray-500 text-sm">
           Selected work from recent film and digital projects.
         </p>
+        <div className="mt-10 flex justify-center">
+          <Link
+              href="/projects"
+              className="group relative inline-flex items-center gap-2 text-sm font-medium text-neutral-400 transition-colors hover:text-white duration-200"
+            >
+              <span className="relative">
+                View All Work
+                <span className="absolute -bottom-1 left-1/2 h-px w-[75%] -translate-x-1/2 origin-center scale-x-0 bg-neutral-500/30 transition-transform duration-200 group-hover:scale-x-100" />
+
+              </span>
+
+              <span className="transition-transform duration-200 group-hover:translate-x-1">
+                →
+              </span>
+          </Link>
+        </div>
       </section>
       
 
