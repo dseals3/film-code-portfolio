@@ -66,6 +66,8 @@ export default function VideoCard({
     
     <Link href={`/projects/${project.slug}`}
         className="group block relative bg-zinc-900 rounded-xl hover:bg-zinc-800 transition overflow-hidden self-start"
+        onMouseEnter={previewMode === "hover" ? handleMouseEnter : undefined}
+        onMouseLeave={previewMode === "hover" ? handleMouseLeave : undefined}
         >
             
             {/* VIDEO WRAPPER */}
@@ -73,8 +75,6 @@ export default function VideoCard({
                 className={`relative w-full overflow-hidden
                     ${isVertical ? "aspect-[9/16]" : "aspect-video"
                 }`}
-                onMouseEnter={previewMode === "hover" ? handleMouseEnter : undefined}
-                onMouseLeave={previewMode === "hover" ? handleMouseLeave : undefined}
             >
                  {project.previewVideo ? (
                     <>
