@@ -1,7 +1,3 @@
-export type MetaKey = "tech" | "tools";
-
-export type ProjectMeta = Record<MetaKey, string[]>;
-
 export type Project = {
   slug: string;
 
@@ -48,3 +44,8 @@ export type ProjectCardData = Pick<
   | "description"
   | "previewVideo"
 >;
+
+export type MetaKey = "tech" | "tools";
+export type PreviewMode = "always" | "hover";
+
+export type ProjectMeta = Record<MetaKey, string[]>;
