@@ -73,6 +73,7 @@ export default function WorkFilters({ projects }: WorkFiltersProps) {
 
       <WorkGrid
         projects={cardProjects}
+        previewMode="hover"
         columns={3}
         showDescription
         descriptionLines={2}
