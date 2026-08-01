@@ -6,7 +6,8 @@ export type Project = {
   year: string;
   description: string;
 
-  previewVideo: string;
+  previewVideo?: string;
+  previewImage?: string;
   fullVideo: string;
 
   authorship?: string;
@@ -43,6 +44,7 @@ export type ProjectCardData = Pick<
   | "year"
   | "description"
   | "previewVideo"
+  | "previewImage"
 >;
 
 export type MetaKey = "tech" | "tools";
