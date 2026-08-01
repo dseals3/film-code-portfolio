@@ -19,7 +19,7 @@ export default function Home() {
           playsInline
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source src="/video/code-prv.mp4" type="video/mp4" />
+          <source src="/projects/portfolio-site/preview.mp4" type="video/mp4" />
         </video>
 
         {/* Dim the video a bit */}
