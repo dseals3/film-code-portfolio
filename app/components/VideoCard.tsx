@@ -6,19 +6,37 @@ import { projectThumbnail } from "../data/assetPaths";
 
 type VideoCardProps = {
   project: ProjectCardData;
+  previewMode: "always" | "hover";
   showDescription?: boolean;
   descriptionLines?: number;
 }
 
 export default function VideoCard({
     project,
+    previewMode,
     showDescription = true,
     descriptionLines = 3,
 }: VideoCardProps) {
     const thumbnail = projectThumbnail(project.slug);
     const isVertical = project.type === "Vertical";
     const videoRef = useRef<HTMLVideoElement>(null);
+    const handleMouseEnter = () => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        video.currentTime = 0;
+        video.play().catch(() => {});
+    };
+    const handleMouseLeave = () => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        video.pause();
+        video.currentTime = 0;
+    };
     useEffect(() => {
+        if (previewMode !== "always") return;
+
         const video = videoRef.current;
 
         if (!video) return;
@@ -32,7 +50,7 @@ export default function VideoCard({
             }
             },
             {
-            threshold: 0.25,
+                threshold: 0.25,
             }
         );
 
@@ -51,25 +69,58 @@ export default function VideoCard({
         >
             
             {/* VIDEO WRAPPER */}
-            <div className={`relative w-full overflow-hidden
-                ${isVertical ? "aspect-[9/16]" : "aspect-video"
-            }`}>
-                {project.previewVideo ? (
+            <div
+                className={`relative w-full overflow-hidden
+                    ${isVertical ? "aspect-[9/16]" : "aspect-video"
+                }`}
+                onMouseEnter={previewMode === "hover" ? handleMouseEnter : undefined}
+                onMouseLeave={previewMode === "hover" ? handleMouseLeave : undefined}
+            >
+                 {project.previewVideo ? (
+                    <>
+                    {/* Thumbnail */}
+                    <img
+                        src={thumbnail}
+                        alt={project.title}
+                        className={`
+                        absolute inset-0
+                        w-full h-full
+                        object-cover
+                        transition-opacity duration-300
+                        ${
+                            previewMode === "always"
+                            ? "opacity-0"
+                            : "opacity-100 group-hover:opacity-0"
+                        }
+                        `}
+                    />
+
+                    {/* Preview Video */}
                     <video
                         ref={videoRef}
-                        className="w-full h-full object-cover"
-                        src={project.previewVideo || undefined}
-                        autoPlay
+                        className={`
+                        absolute inset-0
+                        w-full h-full
+                        object-cover
+                        transition-opacity duration-300
+                        ${
+                            previewMode === "always"
+                            ? "opacity-100"
+                            : "opacity-0 group-hover:opacity-100"
+                        }
+                        `}
+                        src={project.previewVideo}
                         muted
                         loop
                         playsInline
                         preload="metadata"
                     />
+                    </>
                 ) : (
                     <img
-                        src={thumbnail}
-                        alt={project.title}
-                        className="w-full h-full object-cover"
+                    src={thumbnail}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
                     />
                 )}
             {/* Hover CTA */}
