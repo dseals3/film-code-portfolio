@@ -60,6 +60,7 @@ export default function WorkFilters({ projects }: WorkFiltersProps) {
       year: project.year,
       description: project.description,
       previewVideo: project.previewVideo,
+      previewImage: project.previewImage
     }));
 
   return (
