@@ -1,5 +1,5 @@
 export function projectImage(slug: string, file: string) {
-  return `/images/projects/${slug}/${file}`;
+  return `/projects/${slug}/${file}`;
 }
 
 export function projectThumbnail(slug: string) {
