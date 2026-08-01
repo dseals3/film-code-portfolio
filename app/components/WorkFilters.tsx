@@ -59,8 +59,7 @@ export default function WorkFilters({ projects }: WorkFiltersProps) {
       type: project.type,
       year: project.year,
       description: project.description,
-      previewVideo: project.previewVideo,
-      previewImage: project.previewImage
+      previewFormat: project.previewFormat
     }));
 
   return (
