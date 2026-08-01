@@ -76,25 +76,26 @@ export default function VideoCard({
                     ${isVertical ? "aspect-[9/16]" : "aspect-video"
                 }`}
             >
-                 {project.previewVideo ? (
-                    <>
-                    {/* Thumbnail */}
+                {/* Thumbnail */}
                     <img
                         src={thumbnail}
                         alt={project.title}
                         className={`
-                        absolute inset-0
-                        w-full h-full
-                        object-cover
-                        transition-opacity duration-300
-                        ${
-                            previewMode === "always"
-                            ? "opacity-0"
-                            : "opacity-100 group-hover:opacity-0"
-                        }
+                            absolute inset-0
+                            w-full h-full
+                            object-cover
+                            transition-opacity duration-300
+                            ${
+                                project.previewVideo || project.previewImage
+                                ? previewMode === "always"
+                                    ? "opacity-0"
+                                    : "opacity-100 group-hover:opacity-0"
+                                : "opacity-100"
+                            }
                         `}
                     />
-
+                 {project.previewVideo ? (
+                    <>
                     {/* Preview Video */}
                     <video
                         ref={videoRef}
@@ -116,13 +117,20 @@ export default function VideoCard({
                         preload="metadata"
                     />
                     </>
-                ) : (
+                ) : project.previewImage ? (
                     <img
-                    src={thumbnail}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
+                        src={project.previewImage}
+                        className={`
+                        absolute inset-0
+                        w-full h-full
+                        object-cover
+                        opacity-0
+                        transition-opacity duration-300
+                        group-hover:opacity-100
+                        `}
                     />
-                )}
+                    
+                ) : null }
             {/* Hover CTA */}
             <div className="absolute top-4 right-4 z-10">
                 <div className="px-3 py-1 text-sm text-gray-300 bg-black/60 text-white rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition">
