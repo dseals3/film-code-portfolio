@@ -42,6 +42,7 @@ export default function VideoCard({
     };
     useEffect(() => {
         if (previewMode !== "always") return;
+        if (project.previewFormat !== "mp4") return;
 
         const video = videoRef.current;
 
