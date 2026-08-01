@@ -61,6 +61,7 @@ export default function Home() {
 
         <WorkGrid
           projects={work.filter((item) => item.featured)}
+          previewMode="always"
           columns={2}
           showDescription
           descriptionLines={3}
