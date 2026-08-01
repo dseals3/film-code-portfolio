@@ -1,9 +1,9 @@
 import VideoCard from "./VideoCard";
-import type { ProjectCardData } from "@/app/data/types";
+import type { ProjectCardData, PreviewMode } from "@/app/data/types";
 
 type WorkGridProps = {
     projects: ProjectCardData[];
-    previewMode?: "always" | "hover";
+    previewMode?: PreviewMode;
     columns?: 2 | 3 | 4;
     showDescription?: boolean;
     descriptionLines?: number;
