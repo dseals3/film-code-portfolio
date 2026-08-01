@@ -3,12 +3,13 @@ import type { ProjectCardData } from "@/app/data/types";
 
 type WorkGridProps = {
     projects: ProjectCardData[];
+    previewMode?: "always" | "hover";
     columns?: 2 | 3 | 4;
     showDescription?: boolean;
     descriptionLines?: number;
 }
 
-export default function WorkGrid({projects, columns = 2, showDescription, descriptionLines}: WorkGridProps) {
+export default function WorkGrid({projects, previewMode = "always", columns = 2, showDescription, descriptionLines}: WorkGridProps) {
     const gridCols = {
         2: "md:grid-cols-2",
         3: "md:grid-cols-3",
@@ -23,6 +24,7 @@ export default function WorkGrid({projects, columns = 2, showDescription, descri
                 <VideoCard
                     key={project.slug}
                     project={project}
+                    previewMode={previewMode}
                     showDescription={showDescription}
                     descriptionLines={descriptionLines}
                 />
