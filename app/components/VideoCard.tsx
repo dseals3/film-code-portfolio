@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import type { ProjectCardData, PreviewMode } from "../data/types";
-import { projectThumbnail } from "../data/assetPaths";
+import { projectThumbnail, projectPreview } from "../data/assetPaths";
 
 type VideoCardProps = {
   project: ProjectCardData;
@@ -18,6 +18,12 @@ export default function VideoCard({
     descriptionLines = 3,
 }: VideoCardProps) {
     const thumbnail = projectThumbnail(project.slug);
+    const previewSrc = project.previewFormat
+        ? projectPreview(project.slug, project.previewFormat)
+        : undefined;
+    const isVideoPreview = project.previewFormat === "mp4";
+    const isImagePreview = project.previewFormat === "webp";
+    
     const isVertical = project.type === "Vertical";
     const videoRef = useRef<HTMLVideoElement>(null);
     const handleMouseEnter = () => {
@@ -86,7 +92,7 @@ export default function VideoCard({
                             object-cover
                             transition-opacity duration-300
                             ${
-                                project.previewVideo || project.previewImage
+                                project.previewFormat
                                 ? previewMode === "always"
                                     ? "opacity-0"
                                     : "opacity-100 group-hover:opacity-0"
@@ -94,7 +100,7 @@ export default function VideoCard({
                             }
                         `}
                     />
-                 {project.previewVideo ? (
+                 {isVideoPreview ? (
                     <>
                     {/* Preview Video */}
                     <video
@@ -110,16 +116,16 @@ export default function VideoCard({
                             : "opacity-0 group-hover:opacity-100"
                         }
                         `}
-                        src={project.previewVideo}
+                        src={previewSrc}
                         muted
                         loop
                         playsInline
                         preload="metadata"
                     />
                     </>
-                ) : project.previewImage ? (
+                ) : isImagePreview ? (
                     <img
-                        src={project.previewImage}
+                        src={previewSrc}
                         className={`
                         absolute inset-0
                         w-full h-full
