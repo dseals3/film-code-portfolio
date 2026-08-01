@@ -20,7 +20,7 @@ export default function About() {
             <div className="md:w-1/3 flex-shrink-0">
                 <div className="aspect-square rounded-full bg-zinc-900 overflow-hidden">
                     <img
-                    src="/images/headshot-square.jpeg"
+                    src="/headshot-square.jpeg"
                     className="w-full h-full object-cover"
                     alt="Portrait"
                     />
