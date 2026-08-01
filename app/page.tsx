@@ -97,7 +97,7 @@ export default function Home() {
 
         <div className="mt-8 flex justify-center">
           <Link
-              href="/projects"
+              href="/about"
               className="group relative inline-flex items-center gap-2 text-sm font-medium text-neutral-400 transition-colors hover:text-white duration-200"
             >
               <span className="relative">
