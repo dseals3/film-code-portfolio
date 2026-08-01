@@ -180,7 +180,7 @@ export const work: Project[] = [
     type: "Commercial",
     year: "2026",
     description: "",
-    previewVideo: "",
+    previewImage: "/video/charger-chums.webp",
     fullVideo: "https://www.youtube.com/embed/u68MVcpBXbs",
     authorship: "",
     roles: ["2nd AC"],
