@@ -19,3 +19,10 @@ export function projectBTS(
       )
   );
 }
+
+export function projectPreview(
+  slug: string,
+  format: "mp4" | "webp"
+) {
+  return `/projects/${slug}/preview.${format}`;
+}
