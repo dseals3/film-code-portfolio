@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import type { ProjectCardData } from "../data/types";
+import type { ProjectCardData, PreviewMode } from "../data/types";
 import { projectThumbnail } from "../data/assetPaths";
 
 type VideoCardProps = {
   project: ProjectCardData;
-  previewMode: "always" | "hover";
+  previewMode: PreviewMode;
   showDescription?: boolean;
   descriptionLines?: number;
 }
