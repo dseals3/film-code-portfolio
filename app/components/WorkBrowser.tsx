@@ -67,13 +67,13 @@ export default function WorkBrowser({ projects }: WorkBrowserProps) {
     const searchParams = useSearchParams();
     useEffect(() => {
       const role = searchParams.get("role");
+      const tool = searchParams.get("tool");
 
-      if (role) {
-        setFilters((prev) => ({
-          ...prev,
-          roles: [role],
-        }));
-      }
+      setFilters({
+        types: [],
+        roles: role ? [role] : [],
+        tools: tool ? [tool] : [],
+      });
     }, [searchParams]);
     
 
