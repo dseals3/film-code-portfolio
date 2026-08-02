@@ -99,7 +99,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {/* ROLES */}
         <div className="mt-6 mb-12 flex flex-wrap items-center gap-2">
             {project.roles.map((role) => (
-                <span key={role}
+                <Link href={`/projects?role=${encodeURIComponent(role)}`}
+                    key={role}
                     className="
                         px-2.5 py-1
                         text-xs tracking-wide
@@ -112,7 +113,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         transition"
                 >
                     {role}
-                </span>
+                </Link>
             ))}
         </div>
         
