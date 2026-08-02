@@ -147,7 +147,7 @@ export default function VideoCard({
 
             {/* VERTICAL OVERLAY ONLY */}
             {isVertical && (
-                <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
+                <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/90 via-black/70 to-transparent">
                     <div className="flex justify-between text-xs text-gray-300 uppercase mb-2">
                         <span>{project.type}</span>
                         <span>{project.year}</span>
