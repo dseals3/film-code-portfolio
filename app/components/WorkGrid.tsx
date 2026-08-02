@@ -19,7 +19,7 @@ export default function WorkGrid({projects, previewMode = "always", columns = 2,
         <div className={`
             grid grid-cols-1
             ${gridCols[columns]}
-            max-w-6xl mx-auto gap-6`}>
+            w-full max-w-6xl mx-auto gap-6`}>
             {projects.map((project) => (
                 <VideoCard
                     key={project.slug}
@@ -27,8 +27,8 @@ export default function WorkGrid({projects, previewMode = "always", columns = 2,
                     previewMode={previewMode}
                     showDescription={showDescription}
                     descriptionLines={descriptionLines}
-                />
-            ))}
+                />)
+            )}
         </div>
     );
 }
