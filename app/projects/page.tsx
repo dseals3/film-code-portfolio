@@ -1,5 +1,5 @@
 import { work } from "../data/work";
-import WorkFilters from "../components/WorkFilters";
+import WorkBrowser from "../components/WorkBrowser";
 
 export default function WorksPage() {
   return (
@@ -12,7 +12,7 @@ export default function WorksPage() {
         <p className="text-gray-400 mb-12">
           A complete archive of narrative, commercial, and development projects.
         </p>
-        <WorkFilters projects={work} />
+        <WorkBrowser projects={work} />
       </div>
     </main>
   );
