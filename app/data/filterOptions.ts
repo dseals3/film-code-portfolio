@@ -25,22 +25,28 @@ export const tools = [
 ]
 export const toolFilters: Record<string, string[]> = {
     "Sony Camera": [
-    "Sony a7iv",
-    "Sony ZV-E1",
-    "Sony FX30",
-    "Sony FX6"
+        "Sony a7iv",
+        "Sony ZV-E1",
+        "Sony FX30",
+        "Sony FX6"
     ],
     "Blackmagic Camera": [
-    "Blackmagic Pocket 6k Pro",
+        "Blackmagic Pocket 6k Pro",
     ],
     "Drone": [
-    "DJI Mini 3 Pro"
+        "DJI Mini 3 Pro"
     ],
     "Custom Rig": [
-    "Custom Drop Rig",
-    "Plexiglass Platform"
+        "Custom Drop Rig",
+        "Plexiglass Platform"
     ],
     "Davinci Resolve": [
-    "Davinci Resolve"
+        "Davinci Resolve"
     ]
 };
+
+export function getToolFilter(tool: string): string | undefined {
+  return Object.keys(toolFilters).find((filter) =>
+    toolFilters[filter].includes(tool)
+  );
+}
