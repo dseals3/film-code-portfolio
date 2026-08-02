@@ -7,11 +7,11 @@ import WorkGrid from "./WorkGrid";
 import type { Project, ProjectCardData } from "../data/types";
 import { toolFilters } from "../data/filterOptions";
 
-type WorkFiltersProps = {
+type WorkBrowserProps = {
   projects: Project[];
 };
 
-export default function WorkFilters({ projects }: WorkFiltersProps) {
+export default function WorkBrowser({ projects }: WorkBrowserProps) {
     const [filters, setFilters] = useState({
         types: [] as string[],
         roles: [] as string[],
