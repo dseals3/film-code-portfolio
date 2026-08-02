@@ -6,6 +6,8 @@ import MobileFilterWrapper from "./MobileFilterWrapper";
 import WorkGrid from "./WorkGrid";
 import type { Project, ProjectCardData } from "../data/types";
 import { toolFilters } from "../data/filterOptions";
+import { useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 type WorkBrowserProps = {
   projects: Project[];
@@ -61,6 +63,19 @@ export default function WorkBrowser({ projects }: WorkBrowserProps) {
       description: project.description,
       previewFormat: project.previewFormat
     }));
+
+    const searchParams = useSearchParams();
+    useEffect(() => {
+      const role = searchParams.get("role");
+
+      if (role) {
+        setFilters((prev) => ({
+          ...prev,
+          roles: [role],
+        }));
+      }
+    }, [searchParams]);
+    
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-12">
