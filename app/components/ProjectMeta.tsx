@@ -1,4 +1,6 @@
 import type { MetaKey } from "../data/types";
+import Link from "next/link";
+import { getToolFilter } from "../data/filterOptions";
 
 const metaLabels: Record<MetaKey, string> = {
     tech: "Tech Stack",
@@ -9,7 +11,7 @@ type Props = {
 };
 export default function ProjectMeta({ meta }: Props) {
     const entries = Object.entries(meta ?? {}) as [MetaKey, string[]][];
-
+    
     return (
         <>
         {entries.map(([key, items]) => (
@@ -19,8 +21,27 @@ export default function ProjectMeta({ meta }: Props) {
             </p>
 
             <div className="flex flex-wrap items-center gap-2 mb-4">
-              {items.map((tool) => (
-                <span
+              {items.map((tool) => {
+                const filterName = getToolFilter(tool);
+                  if (!filterName) {
+                    return (
+                      <span
+                        key={tool}
+                        className="
+                          px-2.5 py-1
+                          text-xs tracking-wide
+                          rounded-md
+                          bg-white/5
+                          text-gray-400
+                          select-none
+                        "
+                      >
+                        {tool}
+                      </span>
+                    );
+                  }
+                return (
+                <Link href={`/projects?tool=${encodeURIComponent(filterName)}`}
                   key={tool}
                   className="
                     px-2.5 py-1
@@ -35,8 +56,9 @@ export default function ProjectMeta({ meta }: Props) {
                   "
                 >
                   {tool}
-                </span>
-              ))}
+                </Link>
+                );
+              })}
             </div>
           </section>
         ))}
