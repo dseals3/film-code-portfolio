@@ -6,18 +6,18 @@ import MobileFilterWrapper from "./MobileFilterWrapper";
 import WorkGrid from "./WorkGrid";
 import type { Project, ProjectCardData } from "../data/types";
 import { toolFilters } from "../data/filterOptions";
-import { useSearchParams } from "next/navigation";
-import { useEffect } from "react";
 
 type WorkBrowserProps = {
   projects: Project[];
+  initialRole?: string;
+  initialTool?: string;
 };
 
-export default function WorkBrowser({ projects }: WorkBrowserProps) {
+export default function WorkBrowser({ projects, initialRole, initialTool }: WorkBrowserProps) {
     const [filters, setFilters] = useState({
         types: [] as string[],
-        roles: [] as string[],
-        tools: [] as string[],
+        roles: initialRole ? [initialRole] : [],
+        tools: initialTool ? [initialTool] : [],
     });
 
     function toggleFilter(
@@ -63,18 +63,6 @@ export default function WorkBrowser({ projects }: WorkBrowserProps) {
       description: project.description,
       previewFormat: project.previewFormat
     }));
-
-    const searchParams = useSearchParams();
-    useEffect(() => {
-      const role = searchParams.get("role");
-      const tool = searchParams.get("tool");
-
-      setFilters({
-        types: [],
-        roles: role ? [role] : [],
-        tools: tool ? [tool] : [],
-      });
-    }, [searchParams]);
     
 
   return (
