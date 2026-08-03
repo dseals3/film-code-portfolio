@@ -1,7 +1,16 @@
 import { work } from "../data/work";
 import WorkBrowser from "../components/WorkBrowser";
 
-export default function WorksPage() {
+type Props = {
+   searchParams: Promise<{
+    role?: string;
+    tool?: string;
+  }>;
+};
+
+export default async function WorksPage({ searchParams }: Props) {
+  const params = await searchParams;
+
   return (
     <main className="min-h-screen bg-black text-white p-8 py-24">
       <div className="max-w-6xl mx-auto">
@@ -12,7 +21,11 @@ export default function WorksPage() {
         <p className="text-gray-400 mb-12">
           A complete archive of narrative, commercial, and development projects.
         </p>
-        <WorkBrowser projects={work} />
+        <WorkBrowser
+          projects={work}
+          initialRole={params.role}
+          initialTool={params.tool}
+        />
       </div>
     </main>
   );
