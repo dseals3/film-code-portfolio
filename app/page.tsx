@@ -91,8 +91,7 @@ export default function Home() {
       <section className="pt-24 pb-12 px-6 max-w-3xl mx-auto text-center">
         <h2 className="text-2xl font-semibold">About</h2>
         <p className="mt-6 text-gray-300">
-          I'm a filmmaker focused on cinematic storytelling, with an emphasis
-          on mood, pacing, and visual clarity.
+          From one-man Youtube productions to DP'ing short films to coding this website, I do it all.
         </p>
 
         <div className="mt-8 flex justify-center">
