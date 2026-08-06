@@ -15,10 +15,10 @@ export default function About() {
             </p>
         </div>
         {/* IMAGE + TEXT BLOCK */}
-        <div className="max-w-3xl mx-auto w-full mt-12 flex flex-col md:flex-row items-start gap-8">
+        <div className="max-w-5xl mx-auto w-full mt-12 flex flex-col md:flex-row items-start gap-8">
 
             {/* IMAGE */}
-            <div className="md:w-1/3 flex-shrink-0">
+            <div className="w-48 mx-auto md:mx-0 md:w-1/3 flex-shrink-0">
                 <div className="aspect-square rounded-full bg-zinc-900 overflow-hidden">
                     <img
                     src="/headshot-square.jpeg"
