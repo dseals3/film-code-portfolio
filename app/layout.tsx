@@ -2,11 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
-import { SP } from "next/dist/shared/lib/utils";
-
-<head>
-  <meta name="apple-mobile-web-app-title" content="DamianSeals" />
-</head>
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,6 +16,28 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Damian Seals",
   description: "I build for the web - and I shoot for it",
+
+  applicationName: "DamianSeals",
+
+  openGraph: {
+    title: "Damian Seals",
+    description: "I build for the web - and I shoot for it",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Damian Seals",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Damian Seals",
+    description: "I build for the web - and I shoot for it",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
